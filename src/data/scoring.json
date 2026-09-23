@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "score_range": [0, 100],
+  "publish_threshold": 65,
+  "review_threshold": 45,
+  "weights": {
+    "geological_signal": 30,
+    "information_gain": 20,
+    "source_quality": 15,
+    "exploration_stage": 10,
+    "regional_relevance": 10,
+    "technical_specificity": 10,
+    "novelty": 5
+  },
+  "bonuses": {
+    "maiden_drilling": 10,
+    "new_discovery_or_stepout": 10,
+    "new_ground_with_geological_rationale": 7,
+    "new_peer_reviewed_method": 7,
+    "peru": 8,
+    "andes": 5,
+    "primary_technical_document": 5
+  },
+  "penalties": {
+    "financing_only": -20,
+    "corporate_only": -25,
+    "promotional_without_technical_evidence": -20,
+    "duplicate_or_syndicated": -30,
+    "no_primary_source": -15,
+    "stale_without_new_information": -15
+  },
+  "rules": [
+    "A high grade intercept alone is not a discovery.",
+    "Prefer geological information gain over headline magnitude.",
+    "Separate company-reported interpretation from PyOrex interpretation.",
+    "Never infer deposit model when evidence is insufficient.",
+    "Items below publish threshold remain candidates, not published intelligence."
+  ]
+}
