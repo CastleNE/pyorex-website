@@ -1,6 +1,102 @@
 {
   "updated_at": "2026-09-23",
-  "items": [],
+  "items": [
+    {
+      "id": "ogr-structural-ai-2026",
+      "published_at": "2026-09-01",
+      "category": "methods",
+      "title": "Structural-Scale Controls on Evenly-Spaced Hydrothermal Mineralization and AI-Based Predictive Methods",
+      "source_name": "Ore Geology Reviews",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0169136826003793",
+      "topics": [
+        "structural geology",
+        "Riedel shears",
+        "AI",
+        "3D modelling"
+      ],
+      "region": "China / transferable method",
+      "commodities": [
+        "Pb",
+        "Zn"
+      ],
+      "what_changed": "The study combines 3D discrete-element simulation with an MLP model to quantify structural spacing and test prediction of concealed mineralization.",
+      "why_it_matters": "It is a useful example of coupling mechanical geological constraints with machine learning rather than treating prospectivity prediction as a purely statistical black box.",
+      "read_if": "You work with structural targeting, concealed orebodies or prospectivity modelling.",
+      "status": "verified"
+    },
+    {
+      "id": "peru-huyahuya-antabamba-2026",
+      "published_at": "2026-03-01",
+      "category": "andes",
+      "title": "Application of Modern Techniques in the Geochemical, Structural, and Remote Sensing Reassessment of Huyahuya and Antabamba",
+      "source_name": "Revista Minería",
+      "source_url": "https://revistamineria.com.pe/english/application-of-modern-techniques-in-the-geochemical%2C-structural%2C-and-remote-sensing-reassessment-of-the-huyahuya-and-antabamba-",
+      "topics": [
+        "CLR",
+        "factor analysis",
+        "fractal modelling",
+        "remote sensing",
+        "structural geology"
+      ],
+      "region": "Southern Peru",
+      "commodities": [
+        "Cu",
+        "Au"
+      ],
+      "what_changed": "An integrated reassessment of ANAP areas combines compositional geochemistry, fractal methods, remote-sensing indices and structural analysis; the authors report 14 additional target polygons beyond those previously proposed.",
+      "why_it_matters": "This is directly relevant to regional targeting in southern Peru because it demonstrates a reproducible workflow that integrates geochemistry, alteration proxies and structure rather than ranking anomalies independently.",
+      "read_if": "You work on Peru regional exploration, lithogeochemistry or multi-dataset targeting.",
+      "status": "verified"
+    },
+    {
+      "id": "jge-mineral-chemistry-review-2026",
+      "published_at": "2026-09-01",
+      "category": "research",
+      "title": "Mineral chemistry in exploration: A review of diamond, magmatic sulfide, IOA, IOCG, and porphyry systems",
+      "source_name": "Journal of Geochemical Exploration",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0375674226002384",
+      "topics": [
+        "mineral chemistry",
+        "porphyry",
+        "IOCG",
+        "machine learning"
+      ],
+      "region": "Global",
+      "commodities": [
+        "Cu",
+        "Au",
+        "Ni"
+      ],
+      "what_changed": "The review synthesizes mineral-chemistry applications across several deposit families and emphasizes integration with complementary datasets and process-driven models.",
+      "why_it_matters": "Mineral chemistry can provide vectoring resolution beyond bulk-rock geochemistry, but the review reinforces that the strongest exploration value comes from geological integration rather than standalone discrimination plots.",
+      "read_if": "You are designing vectoring workflows or considering mineral chemistry/ML datasets.",
+      "status": "verified"
+    },
+    {
+      "id": "dlp-esperanza-2026",
+      "published_at": "2026-09-10",
+      "category": "discovery",
+      "title": "Esperanza moves into first-ever drill testing in southern Peru",
+      "source_name": "DLP Resources Inc. release via Newsfile",
+      "source_url": "https://www.newsfile-prod.tmx.cloud/release/313757/DLP-Receives-Drill-Permits-at-Esperanza-FirstEver-Drill-Program-to-Commence-September-18-2026",
+      "topics": [
+        "porphyry",
+        "maiden drilling",
+        "geophysics",
+        "targeting"
+      ],
+      "region": "Arequipa, Peru",
+      "commodities": [
+        "Cu",
+        "Au",
+        "Mo"
+      ],
+      "what_changed": "DLP reports permits for a seven-hole ~3,000 m maiden program, including three deep holes targeting an interpreted porphyry core beneath a large magnetic anomaly.",
+      "why_it_matters": "Maiden drilling of a large, previously untested target is a high-information event: the program will test whether coincident surface, geochemical and geophysical vectors translate into a mineralized porphyry system at depth.",
+      "read_if": "You follow new porphyry tests and southern Peru exploration.",
+      "status": "verified"
+    }
+  ],
   "schema": {
     "id": "stable slug",
     "published_at": "ISO date",
@@ -8,9 +104,14 @@
     "title": "source title",
     "source_name": "publisher",
     "source_url": "https://...",
-    "topics": ["structural geology", "lithogeochemistry"],
+    "topics": [
+      "structural geology",
+      "lithogeochemistry"
+    ],
     "region": "region",
-    "commodities": ["Au"],
+    "commodities": [
+      "Au"
+    ],
     "what_changed": "factual summary",
     "why_it_matters": "exploration implication",
     "read_if": "who should read it",
