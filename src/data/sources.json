@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "principles": ["primary sources first","technical relevance over volume","attribute company claims","no unsourced discovery claims","deduplicate syndicated releases"],
+  "tiers": {
+    "A": ["peer-reviewed journals","geological surveys","regulators and exchanges","SEG","SGA","AusIMM"],
+    "B": ["company technical reports and official releases","NI 43-101 / JORC technical disclosures"],
+    "C": ["specialist mining and exploration media for discovery only; verify against primary source before publication"]
+  },
+  "priority_topics": ["new discoveries","mineral exploration methods","structural controls","lithogeochemistry","porphyry","epithermal","IRGS","VMS","geophysics","remote sensing","Peru","Andes"]
+}
