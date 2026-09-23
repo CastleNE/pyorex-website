@@ -1,6 +1,89 @@
 {
   "updated_at": "2026-09-23",
-  "items": [],
+  "items": [
+    {
+      "id": "king-copper-colquemayo-staking-2026-09",
+      "published_at": "2026-09-21",
+      "country": "Peru",
+      "region": "Southern Peru",
+      "company": "King Copper Discovery Corp.",
+      "project": "Colquemayo",
+      "commodities": [
+        "Cu",
+        "Au",
+        "Mo"
+      ],
+      "stage": "early-stage",
+      "opportunity_type": "new ground",
+      "deposit_model": "porphyry / high-sulfidation epithermal",
+      "headline": "King Copper reports ~7,170 ha of additional contiguous concessions at Colquemayo.",
+      "why_it_matters": "The new ground materially enlarges the district-scale search space around an emerging Cu system. The company says staking followed review of historic data and satellite imagery and cites Au-Cu-Mo geochemical anomalies; these are company-reported exploration indicators, not a discovery.",
+      "source_name": "King Copper Discovery Corp.",
+      "source_url": "https://kingcopperdiscovery.com/colquemayo-project/king-copper-discovery-doubles-size-of-land-position-in-colquemayo-copper-district/",
+      "status": "verified"
+    },
+    {
+      "id": "dlp-esperanza-maiden-drilling-2026-09",
+      "published_at": "2026-09-10",
+      "country": "Peru",
+      "region": "Arequipa",
+      "company": "DLP Resources Inc.",
+      "project": "Esperanza",
+      "commodities": [
+        "Cu",
+        "Au",
+        "Mo"
+      ],
+      "stage": "early-stage",
+      "opportunity_type": "strategic",
+      "deposit_model": "porphyry",
+      "headline": "DLP reports permits for the first-ever drill program at Esperanza.",
+      "why_it_matters": "A previously undrilled, district-scale target is moving from surface/geophysical targeting to direct subsurface testing. The planned program combines shallow testing of an oxide zone with deep holes into an interpreted porphyry target.",
+      "source_name": "DLP Resources Inc. release via Newsfile",
+      "source_url": "https://www.newsfile-prod.tmx.cloud/release/313757/DLP-Receives-Drill-Permits-at-Esperanza-FirstEver-Drill-Program-to-Commence-September-18-2026",
+      "status": "verified"
+    },
+    {
+      "id": "coppernico-sombrero-phase2-2026-09",
+      "published_at": "2026-09-10",
+      "country": "Peru",
+      "region": "Ayacucho",
+      "company": "Coppernico Metals Inc.",
+      "project": "Sombrero",
+      "commodities": [
+        "Cu",
+        "Au"
+      ],
+      "stage": "early-stage",
+      "opportunity_type": "strategic",
+      "deposit_model": "skarn / porphyry-related",
+      "headline": "Coppernico contracts a minimum 5,000 m Phase 2 diamond drill program at Sombrero.",
+      "why_it_matters": "The project is preparing a new drill cycle in an underexplored Cu-Au district. Mobilization remains conditional on final start-of-activities authorization, so this is a program catalyst rather than a completed exploration result.",
+      "source_name": "Coppernico Metals Inc. release",
+      "source_url": "https://www.globenewswire.com/news-release/2026/09/10/3359334/0/en/coppernico-signs-drill-contract-for-phase-2-drill-program-at-sombrero.html",
+      "status": "verified"
+    },
+    {
+      "id": "capstone-san-pietro-acquisition-2026-09",
+      "published_at": "2026-09-01",
+      "country": "Chile",
+      "region": "Atacama",
+      "company": "Capstone Copper Corp.",
+      "project": "San Pietro",
+      "commodities": [
+        "Cu",
+        "Au"
+      ],
+      "stage": "resource",
+      "opportunity_type": "acquisition",
+      "deposit_model": "IOCG / Cu-Au",
+      "headline": "Capstone completes acquisition of the San Pietro copper concessions in Chile.",
+      "why_it_matters": "The transaction consolidates additional underexplored ground and mineral inventory inside the Mantoverde–Santo Domingo district, illustrating continued district-scale consolidation around existing and planned infrastructure.",
+      "source_name": "Capstone Copper announcement",
+      "source_url": "https://www.marketindex.com.au/asx/csc/announcements/capstone-completes-acquisition-of-san-pietro-copper-concessi-6A1341525",
+      "status": "verified"
+    }
+  ],
   "schema": {
     "id": "stable slug",
     "published_at": "ISO date",
@@ -8,7 +91,10 @@
     "region": "region or district",
     "company": "company",
     "project": "project",
-    "commodities": ["Au", "Cu"],
+    "commodities": [
+      "Au",
+      "Cu"
+    ],
     "stage": "greenfield | early-stage | resource | advanced",
     "opportunity_type": "new ground | acquisition | option | farm-in | financing | strategic",
     "deposit_model": "porphyry | epithermal | IRGS | VMS | other",
