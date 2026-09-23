@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-09-23",
+  "items": [],
+  "schema": {
+    "id": "stable slug",
+    "published_at": "ISO date",
+    "country": "country",
+    "region": "region or district",
+    "company": "company",
+    "project": "project",
+    "commodities": ["Au", "Cu"],
+    "stage": "greenfield | early-stage | resource | advanced",
+    "opportunity_type": "new ground | acquisition | option | farm-in | financing | strategic",
+    "deposit_model": "porphyry | epithermal | IRGS | VMS | other",
+    "headline": "reported development",
+    "why_it_matters": "PyOrex technical context",
+    "source_name": "original source",
+    "source_url": "https://...",
+    "status": "verified"
+  }
+}
