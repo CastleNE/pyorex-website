@@ -10,13 +10,19 @@ const { title = 'PyOrex', description = 'Exploration intelligence and geoscience
 <body>
 <header class="top">
 <a class="brand" href="/"><span class="mark">△</span><strong>PyOrex</strong><small>EXPLORATION INTELLIGENCE<br/>FOR A COMPLEX WORLD</small></a>
-<nav><a href="/">Home</a><a href="/software">Software</a><a class="hub" href="/hub">PyOrex HUB</a><a href="/docs">Docs</a><a href="https://github.com/ctarazonas/pyorex-desktop">GitHub</a><a href="/support">Support</a></nav>
-<div class="tools"><button class="search">⌕ <span>Search</span></button><button id="lang">ES</button></div>
+<nav><a href="/" data-i18n="navHome">Home</a><a href="/software" data-i18n="navSoftware">Software</a><a class="hub" href="/hub">PyOrex HUB</a><a href="/docs" data-i18n="navDocs">Docs</a><a href="https://github.com/ctarazonas/pyorex-desktop">GitHub</a><a href="/support" data-i18n="navSupport">Support</a></nav>
+<div class="tools"><button class="search">⌕ <span data-i18n="search">Search</span></button><button id="lang" aria-label="Switch language">ES</button></div>
 </header>
 <main><slot /></main>
 <footer><a class="brand" href="/"><span class="mark">△</span><strong>PyOrex</strong></a><span>Exploration intelligence for economic geologists.</span><nav><a href="/">Home</a><a href="/software">Software</a><a href="/hub">HUB</a><a href="/docs">Docs</a></nav><span>© 2026 PyOrex</span></footer>
 <script is:inline>
-const b=document.getElementById('lang'); if(b) b.onclick=()=>{b.textContent=b.textContent==='ES'?'EN':'ES'; document.documentElement.lang=b.textContent==='ES'?'es':'en'};
+const dict={
+ en:{navHome:'Home',navSoftware:'Software',navDocs:'Docs',navSupport:'Support',search:'Search',heroNext:"for what’s next.",heroDesc:'News, discoveries, methods and technical analysis for mineral exploration and economic geology.',explore:'Explore the HUB →',learn:'Learn about PyOrex',latest:'Latest in Exploration',viewAll:'View all →'},
+ es:{navHome:'Inicio',navSoftware:'Software',navDocs:'Docs',navSupport:'Soporte',search:'Buscar',heroNext:'para lo que viene.',heroDesc:'Noticias, descubrimientos, métodos y análisis técnico para exploración mineral y geología económica.',explore:'Explorar el HUB →',learn:'Conoce PyOrex',latest:'Último en Exploración',viewAll:'Ver todo →'}
+};
+function setLang(lang){localStorage.setItem('pyorex-lang',lang);document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(dict[lang][k])el.textContent=dict[lang][k]});const b=document.getElementById('lang');if(b)b.textContent=lang==='en'?'ES':'EN'}
+const saved=localStorage.getItem('pyorex-lang')||'en';setLang(saved);
+document.getElementById('lang')?.addEventListener('click',()=>setLang(document.documentElement.lang==='en'?'es':'en'));
 </script>
 </body></html>
 <style is:global>
