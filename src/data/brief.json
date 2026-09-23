@@ -1,0 +1,19 @@
+{
+  "updated_at": "2026-09-23",
+  "items": [],
+  "schema": {
+    "id": "stable slug",
+    "published_at": "ISO date",
+    "category": "discovery | research | methods | andes | news",
+    "title": "source title",
+    "source_name": "publisher",
+    "source_url": "https://...",
+    "topics": ["structural geology", "lithogeochemistry"],
+    "region": "region",
+    "commodities": ["Au"],
+    "what_changed": "factual summary",
+    "why_it_matters": "exploration implication",
+    "read_if": "who should read it",
+    "status": "verified"
+  }
+}
