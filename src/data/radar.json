@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "pipeline": {
+    "stages": ["discover","normalize","deduplicate","score","verify","classify","publish"],
+    "publication_rule": "Never auto-publish a candidate as verified. A primary source must support the factual claims.",
+    "refresh_target": "hourly candidate discovery; editorial publication after verification"
+  },
+  "candidate_sources": [
+    {
+      "id": "sec-edgar",
+      "name": "SEC EDGAR Latest Filings",
+      "type": "official-regulatory-feed",
+      "status": "active",
+      "endpoint": "/api/radar/sec",
+      "purpose": "discover issuer filings and material corporate developments"
+    }
+  ],
+  "next_sources": ["Canadian issuer disclosures / company IR feeds","ASX announcements","peer-reviewed journal feeds","geological surveys","SEG / SGA / AusIMM"]
+}
