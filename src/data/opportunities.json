@@ -1,6 +1,31 @@
 {
-  "updated_at": "2026-09-23",
+  "updated_at": "2026-09-25",
   "items": [
+    {
+      "id": "tinka-ayawilca-project-radar-2026-09",
+      "published_at": "2026-07-29",
+      "country": "Peru",
+      "region": "Pasco",
+      "company": "Tinka Resources Limited",
+      "project": "Ayawilca",
+      "commodities": [
+        "Zn",
+        "Ag",
+        "Sn"
+      ],
+      "stage": "resource",
+      "opportunity_type": "project radar",
+      "deposit_model": "carbonate replacement (CRD)",
+      "headline": "Ayawilca remains an active polymetallic exploration-development project with additional drilling and target refinement in 2026.",
+      "why_it_matters": "A large Zn-Ag-Sn system in the Central Peruvian polymetallic belt with substantial drilling history, defined resources and remaining exploration targets. PyOrex tracks it as a benchmark junior-controlled Andean project rather than as a new discovery.",
+      "source_name": "Tinka Resources Limited",
+      "source_url": "https://tinkaresources.com/ayawilca-zinc-silver-tin/",
+      "status": "verified",
+      "ownership": "100% Tinka",
+      "drill_status": "249 holes / 94,258 m reported on project page",
+      "last_activity": "2026 exploration updates",
+      "brief_status": "pro"
+    },
     {
       "id": "king-copper-colquemayo-staking-2026-09",
       "published_at": "2026-09-21",
