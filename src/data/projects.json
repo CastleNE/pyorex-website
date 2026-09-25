@@ -1,0 +1,19 @@
+{
+  "updated_at":"2026-09-25",
+  "items":[{
+    "slug":"pierina","name":"Pierina","country":"Peru","region":"Ancash","district":"Jangas",
+    "entity_type":"historic_mine","status":"closure","commodities":["Au","Ag"],
+    "mineralization_style":"High-sulfidation epithermal","deposit_model":"Epithermal Au-Ag","deposit_size":"large",
+    "owner_type":"major","owners":["Barrick"],"operator":"Barrick",
+    "coordinates":null,
+    "summary":"Historic high-sulfidation Au-Ag mine in Ancash, Peru. PyOrex treats Pierina as a deposit knowledge entity rather than a current exploration opportunity.",
+    "geology":"Published USGS work describes mineralization hosted by rhyolitic ash-flow tuffs above andesite-dacite lavas, adjacent to a dacite flow-dome complex.",
+    "mineralization":"USGS studies document advanced-argillic to vuggy-silica alteration and strong lithologic and structural control on hydrothermal fluid flow.",
+    "history":"Barrick states that Pierina began operations in 1998 and that productive activity in the open pit ended in 2013, followed by closure activities.",
+    "sources":[
+      {"id":"S01","name":"Barrick Peru — Pierina","url":"https://www.barrick.com/Spanish/presencia/peru/","type":"operator"},
+      {"id":"S02","name":"USGS — Stable-isotope geochemistry of the Pierina high-sulfidation Au-Ag deposit","url":"https://www.usgs.gov/publications/stable-isotope-geochemistry-pierina-high-sulfidation-au-ag-deposit-peru-influence","type":"research"},
+      {"id":"S03","name":"INGEMMET — Mineral potential of deposits in the Cordillera Occidental, Ancash","url":"https://portal.ingemmet.gob.pe/","type":"geological_survey"}
+    ]
+  }]
+}
