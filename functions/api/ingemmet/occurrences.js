@@ -27,16 +27,16 @@ export async function onRequestGet({request}){
   const u=new URL(request.url), layer=u.searchParams.get("layer")==="reference"?2:0;
   const commodity=(u.searchParams.get("commodity")||"").trim();
   const limit=Math.min(Math.max(Number(u.searchParams.get("limit")||300),1),1000);
-  const offset=Math.max(Number(u.searchParams.get("offset")||0),0);
+  const offset=Math.max(Number(u.searchParams.get("offset")||0),0); const bbox=(u.searchParams.get("bbox")||"").split(",").map(Number);
   const fields=layer===0?"OBJECTID,TIPO,NOMBRE,ELEMENTO,ESTADO,LATITUD,LONGITUD,FRANJA,TIPO_DEPOS,EDAD,FORMACION,GLOBALID,LINK":"OBJECTID,CODIGO_INT,CLASE_DE_R,NOMBRE_DE_,ELEMENTO,MINERALES_,NOMBRE_DEP,PROVINCIA,DISTRITO,HOJA_CATAS,LATITUD_DE,LONGITUD_D,GLOBALID,VALIDADO";
   const q=new URL(SERVICE+"/"+layer+"/query");
-  q.search=new URLSearchParams({where:"1=1",outFields:fields,returnGeometry:"true",outSR:"4326",f:"json"}).toString();
+  const params={where:"1=1",outFields:fields,returnGeometry:"true",outSR:"4326",f:"json",resultOffset:String(offset),resultRecordCount:String(limit),orderByFields:"OBJECTID ASC"};if(bbox.length===4&&bbox.every(Number.isFinite)){params.geometry=bbox.join(",");params.geometryType="esriGeometryEnvelope";params.inSR="4326";params.spatialRel="esriSpatialRelIntersects"}q.search=new URLSearchParams(params).toString();
   const r=await fetch(q,{headers:{"User-Agent":"PyOrex-HUB/1.0"}});
   if(!r.ok) return Response.json({error:"INGEMMET upstream unavailable"},{status:502});
   const j=await r.json();
   if(j.error) return Response.json({error:"INGEMMET query failed",details:j.error.message},{status:502});
   let items=(j.features||[]).map(x=>feature(x,layer)).filter(x=>Number.isFinite(x.latitude)&&Number.isFinite(x.longitude));
   if(commodity) items=items.filter(x=>x.commodities.includes(commodity));
-  items=items.slice(offset,offset+limit);
+  items=items.slice(0,limit);
   return Response.json({source:"INGEMMET GEOCATMIN",layer:layer===0?"metallic":"reference",warning:layer===2?"Reference occurrences are not validated by INGEMMET; PyOrex preserves that distinction.":null,count:items.length,items},{headers:{"Cache-Control":"public, max-age=21600"}});
 }
