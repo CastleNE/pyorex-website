@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "entity_types": ["occurrence","prospect","project","deposit","mine","historic_mine"],
+  "owner_types": ["junior","mid-tier","major","private","state","unknown"],
+  "deposit_sizes": ["occurrence","small","medium","large","world-class","unknown"],
+  "commodities": ["Au","Ag","Cu","Zn","Pb"],
+  "mineralization_styles": ["porphyry","epithermal","CRD","skarn","IOCG","VMS","orogenic","intrusion-related","sediment-hosted","other","unknown"],
+  "source_priority_peru": ["INGEMMET","USGS","technical_report","company_primary","peer_reviewed"],
+  "provenance_required": true,
+  "notes": "INGEMMET reference occurrences must never be promoted to validated records without independent verification."
+}
