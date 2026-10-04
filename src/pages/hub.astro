@@ -7,20 +7,20 @@ const items=data.items;
 <section class="hub">
  <div class="wrap">
   <div class="eyebrow">PYOREX HUB · NEW OPPORTUNITIES</div>
-  <div class="intro"><div><h1>Find the next opportunity.</h1><p>Scouting intelligence for exploration teams looking for junior-controlled projects, partnerships, options and acquisition opportunities.</p></div><a class="brief-link" href="/hub/brief">EXPLORATION BRIEF →</a></div>
+  <div class="intro"><div><h1>Find the next opportunity.</h1><p>A focused scouting screen of junior-controlled Peruvian projects, transactions and strategic watchlist assets. Availability is reported only when supported by a public source.</p></div><a class="brief-link" href="/hub/brief">EXPLORATION BRIEF →</a></div>
   <div class="search"><span>⌕</span><input id="q" placeholder="Search company, project, region, commodity..."/></div>
   <div class="filters">
    <select id="commodity"><option value="">COMMODITY · ALL</option><option>Au</option><option>Ag</option><option>Cu</option><option>Zn</option><option>Pb</option></select>
    <select id="region"><option value="">REGION · ALL</option><option>North</option><option>Central</option><option>South</option></select>
    <select id="stage"><option value="">STAGE · ALL</option><option>Early-stage</option><option>Exploration</option><option>Resource</option><option>Advanced</option></select>
-   <select id="deal"><option value="">DEAL · ALL</option><option>JV</option><option>Option</option><option>Acquisition</option><option>Strategic</option><option>Evaluate</option></select>
+   <select id="deal"><option value="">DEAL · ALL</option><option>JV</option><option>Option</option><option>Acquisition</option><option>Strategic watch</option></select>
   </div>
-  <div class="meta"><span id="count">{items.length} OPPORTUNITIES</span><span>JUNIORS + THIRD-PARTY PROJECTS · SOURCE-TRACEABLE</span></div>
+  <div class="meta"><span id="count">{items.length} OPPORTUNITIES</span><span>PERU JUNIORS · SOURCE-TRACEABLE · UPDATED 2026-10-04</span></div>
   <div id="list" class="list">
    {items.map(x=><article class="card" data-search={(x.company+" "+x.project+" "+x.region+" "+x.country+" "+x.commodities.join(" ")+" "+x.deposit_model+" "+x.stage+" "+(x.association_type||"")+" "+(x.opportunity_rating||"")).toLowerCase()} data-commodities={x.commodities.join(" ")} data-region={(x.macro_region||"").toLowerCase()} data-stage={x.stage.toLowerCase()} data-deal={(x.association_type||"").toLowerCase()}>
     <div class="identity"><small>{x.company}</small><h2>{x.project}</h2><span>{x.region} · {x.country}</span><div class="chips">{x.commodities.map(v=><i>{v}</i>)}</div></div>
     <div class="assessment"><small>PYOREX SCREENING</small><strong>{x.opportunity_rating||x.opportunity_type}</strong><p>{x.why_it_matters}</p></div>
-    <div class="facts"><div><small>DEPOSIT STYLE</small><b>{x.deposit_model}</b></div><div><small>STAGE</small><b>{x.stage}</b></div><div><small>ASSOCIATION</small><b>{x.association_type||"Evaluate"}</b></div></div>
+    <div class="facts"><div><small>DEPOSIT STYLE</small><b>{x.deposit_model}</b></div><div><small>STAGE</small><b>{x.stage}</b></div><div><small>ASSOCIATION</small><b>{x.association_type||"Strategic watch"}</b></div><div><small>AVAILABILITY</small><b>{x.availability_status||"Not publicly marketed"}</b></div></div>
     <div class="actions"><a href={x.source_url} target="_blank" rel="noopener">PRIMARY SOURCE ↗</a><button class="brief" data-name={x.project}>INTELLIGENCE BRIEF <b>PRO</b><em>UNAVAILABLE</em></button></div>
    </article>)}
   </div>
