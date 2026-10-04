@@ -399,6 +399,53 @@
       "source_name": "Peruvian Metals",
       "source_url": "https://www.newsfilecorp.com/release/314325/Peruvian-Metals-Corp.-Commences-Underground-Development-to-Access-HighGrade-AuAg-Sulphides-at-Palta-Dorada",
       "status": "verified"
+    },
+    {
+      "id": "palamina-usicayos-2026-10",
+      "published_at": "2026-09-29",
+      "country": "Peru",
+      "region": "Puno",
+      "macro_region": "south",
+      "company": "Palamina Corp.",
+      "project": "Usicayos",
+      "commodities": [
+        "Au"
+      ],
+      "stage": "exploration",
+      "opportunity_type": "junior discovery watch",
+      "association_type": "Strategic watch",
+      "availability_status": "100% Palamina; not publicly marketed",
+      "deposit_model": "orogenic gold",
+      "headline": "Palamina continues advancing Usicayos after separating its silver-copper portfolio into Colt Silver.",
+      "why_it_matters": "A 100%-owned, royalty-light orogenic gold project in the Puno Orogenic Gold Belt with multiple drill-tested and untested structural zones; corporate simplification increases focus on the gold asset.",
+      "opportunity_rating": "GOLD DISCOVERY WATCH",
+      "source_name": "Palamina",
+      "source_url": "https://www.palamina.com/usicayos",
+      "status": "verified"
+    },
+    {
+      "id": "colt-galena-2026-10",
+      "published_at": "2026-09-29",
+      "country": "Peru",
+      "region": "Puno",
+      "macro_region": "south",
+      "company": "Colt Silver Corp.",
+      "project": "Galena",
+      "commodities": [
+        "Ag",
+        "Cu"
+      ],
+      "stage": "exploration",
+      "opportunity_type": "new junior / drill catalyst",
+      "association_type": "Strategic watch",
+      "availability_status": "100% Colt Silver; not publicly marketed",
+      "deposit_model": "carbonate-hosted Ag-Cu-Mn / CRD-style",
+      "headline": "Newly spun-out Colt Silver is preparing inaugural drilling at Galena after receiving FTA approval.",
+      "why_it_matters": "A newly independent Peru-focused junior with a fully funded flagship drill catalyst and a broader seven-project silver-copper portfolio is exactly the type of emerging corporate opportunity the HUB should surface early.",
+      "opportunity_rating": "NEW JUNIOR WATCH",
+      "source_name": "Palamina / Colt Silver",
+      "source_url": "https://www.palamina.com/news/2026/9/29/palamina-confirms-closing-of-spin-out-arrangement",
+      "status": "verified"
     }
   ],
   "schema": {
