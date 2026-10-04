@@ -1,0 +1,231 @@
+{
+  "updated_at": "2026-10-04",
+  "cadence": "weekly",
+  "sources": [
+    {
+      "id": 1,
+      "company": "AusQuest",
+      "project": "Cangallo",
+      "url": "https://investorhub.ausquest.com.au/announcements/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 2,
+      "company": "Tier One Silver",
+      "project": "Curibaya",
+      "url": "https://tieronesilver.com/news-media/news-releases/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 3,
+      "company": "Xali Gold",
+      "project": "Pico Machay",
+      "url": "https://xaligold.com/news-releases/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 4,
+      "company": "Condor Resources",
+      "project": "Pucamayo",
+      "url": "https://condorresources.com/news/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 5,
+      "company": "Radius Gold",
+      "project": "Jonco",
+      "url": "https://radiusgold.com/news/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 6,
+      "company": "Magma Silver",
+      "project": "Niñobamba",
+      "url": "https://magmasilver.com/category/news/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 7,
+      "company": "Chakana Copper",
+      "project": "La Joya",
+      "url": "https://chakanacopper.com/news/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 8,
+      "company": "Turmalina Metals",
+      "project": "Colquemayo",
+      "url": "https://turmalinametals.com/news/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 9,
+      "company": "Aftermath Silver",
+      "project": "Berenguela",
+      "url": "https://aftermathsilver.com/news/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 10,
+      "company": "Silver X Mining",
+      "project": "Nueva Recuperada",
+      "url": "https://www.silverxmining.com/news/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 11,
+      "company": "Element79 Gold",
+      "project": "Lucero",
+      "url": "https://www.element79.gold/news",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 12,
+      "company": "Patriot Resources",
+      "project": "Tassa",
+      "url": "https://www.patriotresources.com.au/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 13,
+      "company": "Pecoy Copper",
+      "project": "Pecoy",
+      "url": "https://www.pecoycopper.com/news/news-releases/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 14,
+      "company": "Panoro Minerals",
+      "project": "Cotabambas",
+      "url": "https://panoro.com/en/news/2026/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 15,
+      "company": "Peruvian Metals",
+      "project": "Palta Dorada",
+      "url": "https://peruvianmetals.com/news/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 16,
+      "company": "Palamina",
+      "project": "Usicayos",
+      "url": "https://www.palamina.com/news/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 17,
+      "company": "Colt Silver",
+      "project": "Galena",
+      "url": "https://www.coltsilver.com/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "A"
+    },
+    {
+      "id": 18,
+      "company": "Barrick Mining",
+      "project": null,
+      "url": "https://www.barrick.com/English/news/default.aspx",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "B"
+    },
+    {
+      "id": 19,
+      "company": "Teck",
+      "project": null,
+      "url": "https://www.teck.com/news/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "B"
+    },
+    {
+      "id": 20,
+      "company": "Rio Tinto",
+      "project": null,
+      "url": "https://www.riotinto.com/en/news/releases",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "B"
+    },
+    {
+      "id": 21,
+      "company": "First Quantum",
+      "project": null,
+      "url": "https://www.first-quantum.com/English/announcements/default.aspx",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "B"
+    },
+    {
+      "id": 22,
+      "company": "Minsur",
+      "project": null,
+      "url": "https://www.minsur.com/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "B"
+    },
+    {
+      "id": 23,
+      "company": "Anglo American",
+      "project": null,
+      "url": "https://www.angloamerican.com/media/press-releases",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "B"
+    },
+    {
+      "id": 24,
+      "company": "BHP",
+      "project": null,
+      "url": "https://www.bhp.com/news",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "B"
+    },
+    {
+      "id": 25,
+      "company": "Newmont",
+      "project": null,
+      "url": "https://www.newmont.com/investors/news-release/",
+      "source_kind": "company_news",
+      "enabled": true,
+      "priority": "B"
+    }
+  ]
+}
