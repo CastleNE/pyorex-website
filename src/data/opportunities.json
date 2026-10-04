@@ -24,7 +24,10 @@
       "ownership": "100% Tinka",
       "drill_status": "249 holes / 94,258 m reported on project page",
       "last_activity": "2026 exploration updates",
-      "brief_status": "pro"
+      "brief_status": "pro",
+      "macro_region": "central",
+      "association_type": "Evaluate / strategic",
+      "opportunity_rating": "BENCHMARK / WATCH"
     },
     {
       "id": "king-copper-colquemayo-staking-2026-09",
@@ -45,7 +48,10 @@
       "why_it_matters": "The new ground materially enlarges the district-scale search space around an emerging Cu system. The company says staking followed review of historic data and satellite imagery and cites Au-Cu-Mo geochemical anomalies; these are company-reported exploration indicators, not a discovery.",
       "source_name": "King Copper Discovery Corp.",
       "source_url": "https://kingcopperdiscovery.com/colquemayo-project/king-copper-discovery-doubles-size-of-land-position-in-colquemayo-copper-district/",
-      "status": "verified"
+      "status": "verified",
+      "macro_region": "south",
+      "association_type": "Acquisition / evaluate",
+      "opportunity_rating": "STRATEGIC SCREEN"
     },
     {
       "id": "dlp-esperanza-maiden-drilling-2026-09",
@@ -66,7 +72,10 @@
       "why_it_matters": "A previously undrilled, district-scale target is moving from surface/geophysical targeting to direct subsurface testing. The planned program combines shallow testing of an oxide zone with deep holes into an interpreted porphyry target.",
       "source_name": "DLP Resources Inc. release via Newsfile",
       "source_url": "https://www.newsfile-prod.tmx.cloud/release/313757/DLP-Receives-Drill-Permits-at-Esperanza-FirstEver-Drill-Program-to-Commence-September-18-2026",
-      "status": "verified"
+      "status": "verified",
+      "macro_region": "south",
+      "association_type": "Evaluate / strategic",
+      "opportunity_rating": "NEW DRILL CATALYST"
     },
     {
       "id": "coppernico-sombrero-phase2-2026-09",
@@ -86,7 +95,10 @@
       "why_it_matters": "The project is preparing a new drill cycle in an underexplored Cu-Au district. Mobilization remains conditional on final start-of-activities authorization, so this is a program catalyst rather than a completed exploration result.",
       "source_name": "Coppernico Metals Inc. release",
       "source_url": "https://www.globenewswire.com/news-release/2026/09/10/3359334/0/en/coppernico-signs-drill-contract-for-phase-2-drill-program-at-sombrero.html",
-      "status": "verified"
+      "status": "verified",
+      "macro_region": "central",
+      "association_type": "Evaluate / strategic",
+      "opportunity_rating": "ACTIVE JUNIOR"
     },
     {
       "id": "capstone-san-pietro-acquisition-2026-09",
@@ -106,7 +118,10 @@
       "why_it_matters": "The transaction consolidates additional underexplored ground and mineral inventory inside the Mantoverde–Santo Domingo district, illustrating continued district-scale consolidation around existing and planned infrastructure.",
       "source_name": "Capstone Copper announcement",
       "source_url": "https://www.marketindex.com.au/asx/csc/announcements/capstone-completes-acquisition-of-san-pietro-copper-concessi-6A1341525",
-      "status": "verified"
+      "status": "verified",
+      "macro_region": "south",
+      "association_type": "Acquisition",
+      "opportunity_rating": "TRANSACTION BENCHMARK"
     }
   ],
   "schema": {
@@ -127,6 +142,9 @@
     "why_it_matters": "PyOrex technical context",
     "source_name": "original source",
     "source_url": "https://...",
-    "status": "verified"
+    "status": "verified",
+    "macro_region": "north | central | south",
+    "association_type": "JV | option | acquisition | strategic | evaluate",
+    "opportunity_rating": "PyOrex scouting classification; not investment advice"
   }
 }
