@@ -9,24 +9,33 @@ import Base from '../layouts/Base.astro';
   <div class="wrap founder-grid">
     <div class="founder-visual" aria-hidden="true">
       <div class="founder-icon">
-        <svg viewBox="0 0 160 160" role="img" aria-label="Person using a laptop">
-          <circle cx="80" cy="80" r="68" fill="none" stroke="currentColor" stroke-width="2" opacity=".45"/>
-          <circle cx="80" cy="52" r="18" fill="none" stroke="currentColor" stroke-width="5"/>
-          <path d="M48 112c4-24 18-36 32-36s28 12 32 36" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
-          <rect x="45" y="98" width="70" height="38" rx="4" fill="#0a181d" stroke="currentColor" stroke-width="4"/>
-          <path d="M35 138h90" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-          <path d="M74 116h12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <svg viewBox="0 0 220 220" role="img" aria-label="Abstract exploration geologist with laptop">
+          <defs>
+            <linearGradient id="founderStroke" x1="30" y1="20" x2="190" y2="195" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#E5B84B"/>
+              <stop offset=".34" stop-color="#74D9D8"/>
+              <stop offset="1" stop-color="#1FCAD3"/>
+            </linearGradient>
+          </defs>
+          <path d="M31 82C46 43 78 24 116 27c37 3 66 26 77 58" fill="none" stroke="#29454D" stroke-width="1.5"/>
+          <path d="M23 108c7-38 33-69 69-82 41-14 84-1 107 33" fill="none" stroke="#19373F" stroke-width="1.2"/>
+          <path d="M40 146c-11-46 13-92 56-111 40-17 86-4 111 31" fill="none" stroke="#183139" stroke-width="1.1"/>
+          <circle cx="109" cy="76" r="20" fill="none" stroke="url(#founderStroke)" stroke-width="4.5"/>
+          <path d="M73 137c5-27 18-42 36-42s31 15 36 42" fill="none" stroke="url(#founderStroke)" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M56 130h106l-10 45H66z" fill="#091A20" stroke="url(#founderStroke)" stroke-width="3.5" stroke-linejoin="round"/>
+          <path d="M47 177h124" stroke="url(#founderStroke)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M101 151h16" stroke="#E5B84B" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="43" cy="60" r="3" fill="#E5B84B"/>
+          <circle cx="181" cy="113" r="3" fill="#1FCAD3"/>
+          <path d="M43 60 71 49M181 113l-23 10" stroke="#33525A" stroke-width="1.2"/>
         </svg>
       </div>
     </div>
     <div class="founder-copy">
       <div class="eyebrow">ABOUT THE FOUNDER</div>
-      <h2>Brayan Castillo</h2>
+      <h2>Brayan J. Castillo</h2>
       <p class="founder-role">Exploration Geologist · Geochemistry · Data & Technology</p>
       <p class="founder-desc">Exploration geologist focused on integrating geological reasoning, geochemistry and modern data workflows for mineral exploration. PyOrex was created to make advanced exploration methods more accessible, reproducible and practical for working geoscientists.</p>
-      <div class="founder-tags">
-        <span>Mineral Exploration</span><span>Geochemistry</span><span>Structural Geology</span><span>Data Science</span><span>Andean Geology</span>
-      </div>
       <div class="founder-actions">
         <a class="founder-btn primary" href="https://www.linkedin.com/in/brayancastillo/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
         <a class="founder-btn" href="https://www.researchgate.net/profile/Brayan-Castillo-9" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a>
@@ -38,5 +47,5 @@ import Base from '../layouts/Base.astro';
 </Base>
 <style>
 .homehero{min-height:650px;background:radial-gradient(circle at 76% 40%,#19333b 0,#0b1c22 28%,#061216 63%);position:relative;overflow:hidden}.homegrid{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px}.homehero h1{font-size:clamp(58px,6vw,92px);line-height:.91;letter-spacing:-.06em;margin:22px 0}.homehero h1 span{font-weight:250;color:#b4c0c2}.homehero p{max-width:650px;color:#b7c2c4;font-size:18px;line-height:1.65}.actions{display:flex;gap:12px;margin-top:30px}.signals{display:flex;gap:26px;margin-top:70px;font-size:9px;letter-spacing:.14em;color:#6f8288}.visual{height:500px;position:relative}.orb{position:absolute;width:370px;height:370px;border:1px solid #37515a;border-radius:50%;top:55px;left:80px;box-shadow:0 0 100px rgba(229,184,75,.05),inset 0 0 80px rgba(56,104,118,.08)}.orb:before,.orb:after{content:"";position:absolute;border:1px solid #263d45;border-radius:50%;inset:50px}.orb:after{inset:110px;border-color:#7b672f}.trace{position:absolute;height:1px;width:520px;background:linear-gradient(90deg,transparent,#e5b84b,transparent);transform:rotate(-35deg);top:260px;left:0;opacity:.45}.t2{transform:rotate(28deg);background:linear-gradient(90deg,transparent,#5f8591,transparent);top:230px}.float{position:absolute;background:rgba(7,18,22,.86);border:1px solid #30454d;padding:16px 19px;min-width:210px;backdrop-filter:blur(8px)}.float small{display:block;color:var(--gold);font-size:8px;letter-spacing:.12em;margin-bottom:7px}.float b{font-size:14px}.f1{top:100px;right:0}.f2{bottom:80px;left:20px}.ecosystem{background:#0a181d;padding:85px 0}.intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:38px}.intro h2{font-size:48px;letter-spacing:-.045em;margin:13px 0 0}.intro p{color:var(--muted);line-height:1.65;max-width:570px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{min-height:320px;padding:32px;border:1px solid var(--line);background:#0d2026;position:relative;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#5b7077}.card>span{color:#6e7d82;font-size:11px}.card .icon{font-size:44px;color:var(--gold);margin:40px 0 25px}.card h3{font-size:30px;margin:0 0 12px}.card p{color:var(--muted);line-height:1.6;max-width:500px}.card b{position:absolute;bottom:30px;font-size:12px}.hubcard{background:linear-gradient(135deg,#11262d,#0b1a20)}.statement{padding:100px 0;background:#e8e5dc;color:#111}.statement small{font-size:10px;letter-spacing:.15em}.statement h2{font-size:clamp(48px,6vw,82px);line-height:.95;letter-spacing:-.055em;margin:22px 0 0;font-weight:500}@media(max-width:900px){.homegrid,.intro,.cards{grid-template-columns:1fr}.visual{display:none}.homegrid{min-height:600px}.signals{flex-wrap:wrap}.ecosystem{padding:60px 0}}
-.founder{padding:90px 0;background:#08161b;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.founder-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:64px;align-items:center}.founder-visual{display:flex;justify-content:center}.founder-icon{width:min(320px,80%);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;color:#1fd6df;background:radial-gradient(circle at 50% 45%,rgba(31,214,223,.10),rgba(31,214,223,.02) 55%,transparent 72%);border:1px solid #1d434c;box-shadow:0 0 80px rgba(31,214,223,.06)}.founder-icon svg{width:72%;height:72%}.founder-copy h2{font-size:clamp(46px,5vw,74px);line-height:.96;letter-spacing:-.05em;margin:15px 0 14px}.founder-role{color:#31d7df;font-size:17px;margin:0 0 20px}.founder-desc{max-width:760px;color:#b7c2c4;font-size:17px;line-height:1.7}.founder-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.founder-tags span{padding:8px 12px;border:1px solid #29434b;border-radius:999px;color:#aebdc1;font-size:12px}.founder-actions{display:flex;gap:12px;margin-top:28px}.founder-btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border:1px solid #25cad3;border-radius:4px;color:#34dbe3;font-size:14px;font-weight:600}.founder-btn.primary{background:#22d3dc;color:#041317}.founder-btn:hover{transform:translateY(-1px)}@media(max-width:900px){.founder{padding:64px 0}.founder-grid{grid-template-columns:1fr;gap:34px}.founder-visual{justify-content:flex-start}.founder-icon{width:190px}.founder-actions{flex-wrap:wrap}}
+.founder{padding:90px 0;background:#08161b;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.founder-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:64px;align-items:center}.founder-visual{display:flex;justify-content:center}.founder-icon{width:min(340px,84%);aspect-ratio:1;display:grid;place-items:center;background:radial-gradient(circle at 50% 46%,rgba(31,202,211,.08),rgba(8,22,27,0) 68%);position:relative}.founder-icon:before{content:"";position:absolute;inset:9%;border:1px solid rgba(70,112,122,.32);border-radius:50%;box-shadow:0 0 70px rgba(31,202,211,.035)}.founder-icon svg{width:84%;height:84%;filter:drop-shadow(0 0 16px rgba(31,202,211,.07))}.founder-copy h2{font-size:clamp(46px,5vw,74px);line-height:.96;letter-spacing:-.05em;margin:15px 0 14px}.founder-role{color:#31d7df;font-size:17px;margin:0 0 20px}.founder-desc{max-width:760px;color:#b7c2c4;font-size:17px;line-height:1.7}.founder-actions{display:flex;gap:12px;margin-top:28px}.founder-btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border:1px solid #25cad3;border-radius:4px;color:#34dbe3;font-size:14px;font-weight:600}.founder-btn.primary{background:#22d3dc;color:#041317}.founder-btn:hover{transform:translateY(-1px)}@media(max-width:900px){.founder{padding:64px 0}.founder-grid{grid-template-columns:1fr;gap:34px}.founder-visual{justify-content:flex-start}.founder-icon{width:190px}.founder-actions{flex-wrap:wrap}}
 </style>
