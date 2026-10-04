@@ -1,0 +1,21 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+<Base title="PyOrex HUB Setup" description="Protected HUB database setup.">
+<section class="wrap" style="padding:80px 0;max-width:760px">
+  <div class="eyebrow">PYOREX HUB · DATABASE SETUP</div>
+  <h1>Initialize HUB database</h1>
+  <p>Enter the private HUB ingest token. The operation is idempotent: existing events are not duplicated.</p>
+  <input id="token" type="password" placeholder="HUB_INGEST_TOKEN" style="width:100%;padding:14px;margin:18px 0;background:#0b1b1f;color:#fff;border:1px solid #304247">
+  <button id="run" class="btn">Initialize D1</button>
+  <pre id="out" style="margin-top:24px;white-space:pre-wrap"></pre>
+</section>
+<script is:inline>
+document.getElementById("run").onclick=async()=>{
+ const out=document.getElementById("out"), token=document.getElementById("token").value.trim();
+ out.textContent="Initializing…";
+ try{const r=await fetch("/api/hub/bootstrap",{method:"POST",headers:{Authorization:"Bearer "+token}});out.textContent=JSON.stringify(await r.json(),null,2)}
+ catch(e){out.textContent=String(e)}
+};
+</script>
+</Base>
