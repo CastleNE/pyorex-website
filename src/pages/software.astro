@@ -1,92 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="PyOrex Web — Geochemistry & Spectrometry" description="PyOrex Web for geochemical and spectral data processing.">
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow">PYOREX WEB</div>
-      <h1>Process.<br/><span>Interpret.</span><br/>Explore.</h1>
-      <p class="lead">A browser-based geoscience environment for geochemical and spectral data processing.</p>
-      <div class="actions"><a class="btn gold" href="#workspace">Open workspace →</a><a class="btn" href="#desktop">PyOrex Desktop</a></div>
-      <div class="local"><span></span><b>Local-first processing</b> Your analytical files are processed in the browser whenever possible.</div>
-    </div>
-    <div class="flowcard">
-      <div class="flowhead"><span>PYOREX WEB</span><small>GEOSCIENCE WORKSPACE</small></div>
-      <div class="flow"><div><small>01</small><b>LOAD</b><em>CSV / XLSX</em></div><i>→</i><div><small>02</small><b>PROCESS</b><em>Geochem / Spectra</em></div><i>→</i><div><small>03</small><b>INTERPRET</b><em>Ask PyOrex</em></div></div>
-      <div class="signal"></div><p>From raw analytical data to geological meaning.</p>
-    </div>
+<Base title="PyOrex Software — Coming Soon" description="PyOrex geoscience software for mineral exploration.">
+<section style="min-height:72vh;display:flex;align-items:center;background:#07171b">
+  <div class="wrap" style="padding:90px 0">
+    <div class="eyebrow">PYOREX SOFTWARE · IN DEVELOPMENT</div>
+    <h1 style="font-size:clamp(64px,9vw,120px);line-height:.9;letter-spacing:-.06em;margin:20px 0 28px">COMING<br/>SOON</h1>
+    <p style="max-width:650px;color:#9fb0b1;font-size:18px;line-height:1.7">A new geoscience workspace for mineral exploration is under active development.</p>
+    <p style="color:#efbd35;font:11px ui-monospace,monospace;letter-spacing:.12em;margin-top:34px">FOCUSED · GEOLOGICAL · PRACTICAL</p>
+    <a class="btn" href="/hub" style="display:inline-block;margin-top:32px">Explore PyOrex HUB →</a>
   </div>
 </section>
-
-<section id="workspace" class="workspace">
-  <div class="wrap">
-    <div class="section-head"><div><div class="eyebrow">WORKSPACE</div><h2>Start with your data.</h2></div><p>Choose the analytical environment. PyOrex detects fields, prepares numeric data and opens the relevant processor.</p></div>
-    <div class="modules">
-      <article class="module">
-        <div class="modtop"><span>01</span><small>GEOCHEMISTRY</small></div>
-        <div class="modicon">⌁</div><h3>Geochemistry</h3>
-        <p>Assays and whole-rock data: QA/QC-ready inspection, non-detect handling, statistics and exploratory relationships.</p>
-        <label class="upload"><input id="geochem" type="file" accept=".csv,.xlsx,.xls"/><b>Choose geochemical dataset</b><span>CSV / XLSX</span></label>
-      </article>
-      <article class="module">
-        <div class="modtop"><span>02</span><small>SPECTROMETRY</small></div>
-        <div class="modicon">∿</div><h3>Spectrometry</h3>
-        <p>Spectral measurements: wavelength detection, curve review and candidate absorption-feature inspection.</p>
-        <label class="upload"><input id="spectra" type="file" accept=".csv,.xlsx,.xls"/><b>Choose spectral dataset</b><span>CSV / XLSX</span></label>
-      </article>
-    </div>
-    <div id="load-status" class="status">No dataset loaded.</div>
-
-    <section id="processor" class="processor" hidden>
-      <div class="processor-head">
-        <div><div class="eyebrow">ACTIVE DATASET</div><h2 id="file-name">—</h2></div>
-        <div class="processor-actions"><select id="nd-rule" title="Non-detect replacement"><option value="half">{'<LDL → ½ LDL'}</option><option value="dl">{'<LDL → LDL'}</option><option value="null">{'<LDL → null'}</option></select><button id="export-csv" type="button">Export processed CSV</button></div>
-      </div>
-
-      <div class="metrics">
-        <div><small>SHEET</small><b id="sheet-name">—</b></div><div><small>ROWS</small><b id="row-count">—</b></div><div><small>COLUMNS</small><b id="col-count">—</b></div><div><small>NUMERIC</small><b id="num-count">—</b></div><div><small>MODE</small><b id="mode-value">—</b></div>
-      </div>
-
-      <div class="tabs">
-        <button class="tooltab active" data-tab="overview">Overview</button>
-        <button class="tooltab" data-tab="stats">Statistics</button>
-        <button class="tooltab" data-tab="charts">Charts</button>
-        <button id="spectral-tab-btn" class="tooltab" data-tab="spectral" hidden>Spectra</button>
-      </div>
-
-      <div id="panel-overview" class="toolpanel">
-        <div class="fieldblock"><small>DETECTED FIELDS</small><div id="field-tags"></div></div>
-        <div class="tablewrap"><table><thead id="data-head"></thead><tbody id="data-body"></tbody></table></div>
-      </div>
-
-      <div id="panel-stats" class="toolpanel" hidden>
-        <div class="callout"><b>Non-detect handling is explicit.</b><span>Change the rule above and PyOrex recalculates the statistics. Original values remain untouched in memory.</span></div>
-        <div class="tablewrap"><table class="stats"><thead><tr><th>Variable</th><th>N</th><th>Missing</th><th>&lt;LDL</th><th>Min</th><th>Max</th><th>Mean</th><th>Median</th><th>SD</th><th>P90</th><th>P95</th></tr></thead><tbody id="stats-body"></tbody></table></div>
-      </div>
-
-      <div id="panel-charts" class="toolpanel" hidden>
-        <div class="chartgrid">
-          <article class="chartcard"><div class="charthead"><h3>Scatter</h3><div><select id="x-var"></select><span>vs</span><select id="y-var"></select></div></div><div id="scatter-plot"></div></article>
-          <article class="chartcard"><div class="charthead"><h3>Histogram</h3><select id="hist-var"></select></div><div id="hist-plot"></div></article>
-        </div>
-      </div>
-
-      <div id="panel-spectral" class="toolpanel" hidden>
-        <div class="spectral-controls"><label>Spectrum row <input id="spectrum-row" type="number" min="0" value="0"/></label><span>Wide spectra: wavelength columns are auto-detected from ~350–2600 nm. Long spectra: PyOrex looks for wavelength + reflectance fields.</span></div>
-        <div class="chartcard"><div class="charthead"><h3>Spectral curve</h3></div><div id="spectral-plot"></div><div id="absorption-list" class="absorptions"></div></div>
-        <div class="callout warning"><b>Candidate absorptions, not mineral IDs.</b><span>PyOrex marks local spectral minima for review. Mineral identification and continuum-removal workflows come next.</span></div>
-      </div>
-    </section>
-  </div>
-</section>
-
-<section class="ask">
-  <div class="wrap ask-grid">
-    <div><div class="eyebrow">ASK PYOREX</div><h2>Not a chatbot.<br/><span>A geological advisor.</span></h2></div>
-    <div class="askcard"><div class="prompt">“Which sector shows the more proximal hydrothermal signature?”</div><p>The next layer will connect dataset statistics, geological context, references and case studies so PyOrex can explain patterns instead of only plotting them.</p><div class="chips"><span>Dataset-aware</span><span>Geological reasoning</span><span>References</span><span>Case studies</span></div><button disabled>Ask PyOrex · next core milestone</button></div>
-  </div>
-</section>
-
-<section id="desktop" class="desktop"><div class="wrap desk-grid"><div><div class="eyebrow">PYOREX DESKTOP</div><h2>Full professional environment.</h2></div><p>Desktop remains the heavier offline environment. PyOrex Web focuses on fast analytical processing and interpretation in the browser.</p></div></section>
-
+</Base>
