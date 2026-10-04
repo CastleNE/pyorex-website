@@ -1,0 +1,67 @@
+{
+  "updated_at": "2026-10-04",
+  "items": [
+    {
+      "id": "barrick-peru-yauri-tartaro-2026-q2",
+      "date": "2026-08-11",
+      "company": "Barrick Mining",
+      "category": "MAJOR EXPLORATION",
+      "region": "Peru",
+      "commodities": [
+        "Cu",
+        "Au"
+      ],
+      "headline": "Barrick advances early-stage exploration in Peru's Yauri and Tartaro districts.",
+      "signal": "Barrick reports new targets in Yauri supporting a clustered-porphyry concept and says land consolidation is well advanced in the new Tartaro district.",
+      "why_it_matters": "A major continuing to generate and consolidate greenfield ground is a useful signal for district-scale targeting and future partnership or land-position activity.",
+      "source_name": "Barrick Q2 2026 Results",
+      "source_url": "https://www.barrick.com/English/news/news-details/2026/q2-2026-results/default.aspx"
+    },
+    {
+      "id": "teck-condor-cobreorco-2026",
+      "date": "2026-05-29",
+      "company": "Teck / Condor Resources",
+      "category": "MAJOR × JUNIOR",
+      "region": "Apurímac, Peru",
+      "commodities": [
+        "Cu",
+        "Au"
+      ],
+      "headline": "Teck-funded drilling begins at the junior-held Cobreorco project.",
+      "signal": "A 3,500 m, six-hole diamond program is the first drilling under the Teck Peru option/JV with Condor Resources; two rigs were planned to test coincident skarn-porphyry geophysical and geochemical targets.",
+      "why_it_matters": "This is exactly the type of major–junior transaction PyOrex should track: a major funding drill-scale technical validation of a junior-generated target.",
+      "source_name": "Condor Resources",
+      "source_url": "https://condorresources.com/news/condor-resources-announces-drilling-program-at-the-cobreorco-copper-gold-project-peru/"
+    },
+    {
+      "id": "minsur-latinmetals-lacsha-2026",
+      "date": "2026-08-18",
+      "company": "Minsur / Latin Metals",
+      "category": "STRATEGIC TRANSACTION",
+      "region": "Lima, Peru",
+      "commodities": [
+        "Cu"
+      ],
+      "headline": "Minsur and Latin Metals agree option terms for the Lacsha copper project.",
+      "signal": "The LOI contemplates an initial 75% earn-in with cash payments and up to 60,000 m of Minsur-funded drilling, followed by a path to 100% ownership.",
+      "why_it_matters": "A live Peru transaction provides a strong benchmark for how technically attractive junior/project-generator copper ground can be structured for a larger strategic partner.",
+      "source_name": "Latin Metals",
+      "source_url": "https://www.latin-metals.com/news/2026/latin-metals-and-minsur-sa-agree-option-terms-for-lacsha-c2026-08-18-060503"
+    },
+    {
+      "id": "rio-fqm-la-granja",
+      "date": "2026-10-04",
+      "company": "First Quantum / Rio Tinto",
+      "category": "MAJOR JV WATCH",
+      "region": "Cajamarca, Peru",
+      "commodities": [
+        "Cu"
+      ],
+      "headline": "La Granja remains a major-company JV benchmark for Peru copper.",
+      "signal": "First Quantum holds 55% and Rio Tinto 45%; First Quantum is responsible for sole-funding agreed work toward feasibility under the JV structure.",
+      "why_it_matters": "Not a new 2026 transaction, but strategically relevant as a benchmark for major-to-major risk sharing around a very large, technically complex Peruvian copper asset.",
+      "source_name": "Rio Tinto",
+      "source_url": "https://www.riotinto.com/en/news/releases/2023/rio-tinto-and-first-quantum-complete-la-granja-joint-venture-transaction"
+    }
+  ]
+}
