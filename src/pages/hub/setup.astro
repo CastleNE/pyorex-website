@@ -14,8 +14,16 @@ import Base from "../../layouts/Base.astro";
 document.getElementById("run").onclick=async()=>{
  const out=document.getElementById("out"), token=document.getElementById("token").value.trim();
  out.textContent="Initializing…";
- try{const r=await fetch("/api/hub/bootstrap",{method:"POST",headers:{Authorization:"Bearer "+token}});out.textContent=JSON.stringify(await r.json(),null,2)}
- catch(e){out.textContent=String(e)}
+ try{
+  const r=await fetch("/api/hub/bootstrap",{method:"POST",headers:{Authorization:"Bearer "+token}});
+  const raw=await r.text();
+  let body; try{body=raw?JSON.parse(raw):null}catch{body=null}
+  if(!r.ok){
+    out.textContent=body?JSON.stringify(body,null,2):("Bootstrap failed (HTTP "+r.status+"). No JSON response was returned.");
+    return;
+  }
+  out.textContent=body?JSON.stringify(body,null,2):"Bootstrap completed, but the server returned an empty response.";
+ } catch(e){out.textContent="Request failed: "+String(e)}
 };
 </script>
 </Base>
