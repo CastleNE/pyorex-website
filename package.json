@@ -12,6 +12,7 @@
     "@astrojs/check": "latest",
     "astro": "latest",
     "typescript": "latest",
-    "leaflet": "1.9.4"
+    "leaflet": "1.9.4",
+    "xlsx": "0.18.5"
   }
 }
