@@ -1,19 +1,23 @@
 ---
 import Base from '../../layouts/Base.astro';
 import data from '../../data/opportunities.json';
+import archive from '../../data/project-events.json';
 export function getStaticPaths(){return data.items.map(item=>({params:{slug:item.slug||item.project.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')},props:{item}}))}
 const {item}=Astro.props;
 const dt=new Date(item.published_at+'T00:00:00');
 const q='Q'+(Math.floor(dt.getUTCMonth()/3)+1);
+const events=archive.items.filter(e=>e.project===item.project).sort((a,b)=>b.date.localeCompare(a.date));
+if(!events.length)events.push({project:item.project,date:item.published_at,type:'Project update',title:item.headline,summary:item.why_it_matters,source_name:item.source_name,source_url:item.source_url});
+const last=events[0];
 ---
 <Base title={item.project+' — PyOrex HUB'}>
 <section class="project"><div class="wrap">
 <a class="back" href="/hub">← PYOREX HUB</a>
-<header><div><div class="eyebrow">PROJECT RECORD · {item.country.toUpperCase()}</div><h1>{item.project}</h1><p>{item.company} · {item.region}, {item.country}</p><div class="chips">{item.commodities.map(v=><i>{v}</i>)}</div></div><div class="status"><small>LAST MATERIAL UPDATE</small><strong>{item.published_at}</strong><span>{q} {dt.getUTCFullYear()}</span></div></header>
+<header><div><div class="eyebrow">PROJECT RECORD · {item.country.toUpperCase()}</div><h1>{item.project}</h1><p>{item.company} · {item.region}, {item.country}</p><div class="chips">{item.commodities.map(v=><i>{v}</i>)}</div></div><div class="status"><small>LAST MATERIAL UPDATE</small><strong>{last.date}</strong><span>{'Q'+(Math.floor(new Date(last.date+'T00:00:00').getUTCMonth()/3)+1)} {new Date(last.date+'T00:00:00').getUTCFullYear()}</span></div></header>
 <div class="grid">
 <aside><div><small>DEPOSIT STYLE</small><b>{item.deposit_model}</b></div><div><small>STAGE</small><b>{item.stage}</b></div><div><small>STATUS / ASSOCIATION</small><b>{item.association_type||'Strategic watch'}</b></div><div><small>PUBLIC AVAILABILITY</small><b>{item.availability_status||'Not publicly marketed'}</b></div><div><small>PYOREX SCREENING</small><b class="gold">{item.opportunity_rating||item.opportunity_type}</b></div></aside>
-<main><div class="timeline-head"><div><div class="eyebrow">HISTORICAL TIMELINE</div><h2>Project signals</h2></div><span>1 VERIFIED EVENT</span></div>
-<article class="event"><div class="date"><b>{item.published_at}</b><span>{q} {dt.getUTCFullYear()}</span></div><div><small>{item.source_name} · PRIMARY SOURCE</small><h3>{item.headline}</h3><p>{item.why_it_matters}</p><a href={item.source_url} target="_blank" rel="noopener">OPEN PRIMARY SOURCE ↗</a></div></article>
+<main><div class="timeline-head"><div><div class="eyebrow">HISTORICAL TIMELINE</div><h2>Project signals</h2></div><span>{events.length} VERIFIED EVENT{events.length===1?'':'S'}</span></div>
+{events.map(e=>{const d=new Date(e.date+'T00:00:00'),eq='Q'+(Math.floor(d.getUTCMonth()/3)+1);return <article class="event"><div class="date"><b>{e.date}</b><span>{eq} {d.getUTCFullYear()}</span></div><div><small>{e.type.toUpperCase()} · {e.source_name} · PRIMARY SOURCE</small><h3>{e.title}</h3><p>{e.summary}</p><a href={e.source_url} target="_blank" rel="noopener">OPEN PRIMARY SOURCE ↗</a></div></article>})}
 <div class="note"><b>ARCHIVE STATUS</b><p>This project record is now persistent. New material events will be appended to this timeline; previous events will not be overwritten.</p></div>
 </main></div>
 </div></section>
