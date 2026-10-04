@@ -1,7 +1,89 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="PyOrex Software — Coming Soon" description="PyOrex Software is under active development.">
-<section class="soon"><div class="wrap"><div class="eyebrow">PYOREX SOFTWARE · IN DEVELOPMENT</div><div class="badge">COMING SOON</div><h1>Built for<br/><span>exploration.</span></h1><p>A new geoscience workspace for mineral exploration is under active development.</p><div class="line"></div><div class="note"><b>Focused. Geological. Practical.</b><span>More will be revealed when it is ready.</span></div><a class="btn gold" href="/hub">Explore PyOrex HUB →</a></div></section>
+<Base title="PyOrex Web — Geochemistry & Spectrometry" description="PyOrex Web for geochemical and spectral data processing.">
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">PYOREX WEB</div>
+      <h1>Process.<br/><span>Interpret.</span><br/>Explore.</h1>
+      <p class="lead">A geoscience workspace focused on geochemical and spectral data processing, built for fast exploration workflows in the browser.</p>
+      <div class="actions"><a class="btn gold" href="#workspace">Open workspace →</a><a class="btn" href="#desktop">PyOrex Desktop</a></div>
+      <div class="local"><span></span><b>Local-first processing</b> Your files stay in your browser whenever possible.</div>
+    </div>
+    <div class="flowcard">
+      <div class="flowhead"><span>PYOREX WEB</span><small>GEOSCIENCE WORKSPACE</small></div>
+      <div class="flow">
+        <div><small>01</small><b>LOAD</b><em>CSV / XLSX</em></div><i>→</i>
+        <div><small>02</small><b>PROCESS</b><em>Geochem / Spectra</em></div><i>→</i>
+        <div><small>03</small><b>INTERPRET</b><em>Ask PyOrex</em></div>
+      </div>
+      <div class="signal"></div>
+      <p>From raw analytical data to geological meaning, without the usual software friction.</p>
+    </div>
+  </div>
+</section>
+
+<section id="workspace" class="workspace">
+  <div class="wrap">
+    <div class="sectionhead"><div><div class="eyebrow">CORE WORKSPACE</div><h2>Start with your data.</h2></div><p>Two focused environments for exploration workflows: geochemistry and spectrometry.</p></div>
+    <div class="modules">
+      <article class="module">
+        <div class="modtop"><span>01</span><small>GEOCHEMISTRY</small></div>
+        <div class="modicon">⌁</div>
+        <h3>Geochemistry</h3>
+        <p>Clean, inspect and explore assay and whole-rock geochemical datasets before geological interpretation.</p>
+        <ul><li>CSV / XLSX import</li><li>Numeric-field detection</li><li>&lt;LDL & missing-data checks</li><li>Descriptive statistics & percentiles</li><li>Element relationships & ratios</li><li>Classification-ready datasets</li></ul>
+        <label class="upload"><input id="geochem" type="file" accept=".csv,.xlsx,.xls"/><b>Choose geochemical dataset</b><span>CSV / XLSX</span></label>
+      </article>
+      <article class="module">
+        <div class="modtop"><span>02</span><small>SPECTROMETRY</small></div>
+        <div class="modicon">∿</div>
+        <h3>Spectrometry</h3>
+        <p>Review spectral measurements and convert wavelength-domain information into alteration-relevant geological signals.</p>
+        <ul><li>Spectral CSV / XLSX import</li><li>Wavelength / reflectance detection</li><li>Curve normalization</li><li>Feature-depth inspection</li><li>Absorption positions</li><li>Mineral / alteration interpretation</li></ul>
+        <label class="upload"><input id="spectra" type="file" accept=".csv,.xlsx,.xls"/><b>Choose spectral dataset</b><span>CSV / XLSX</span></label>
+      </article>
+    </div>
+
+    <div id="preview" class="preview" hidden>
+      <div class="previewtop"><div><small>DATASET LOADED</small><h3 id="fname">—</h3></div><button id="clear" type="button">Clear</button></div>
+      <div class="metrics"><div><small>ROWS</small><b id="rows">—</b></div><div><small>COLUMNS</small><b id="cols">—</b></div><div><small>NUMERIC</small><b id="numeric">—</b></div><div><small>MODE</small><b id="mode">—</b></div></div>
+      <div class="fields"><small>DETECTED FIELDS</small><div id="tags"></div></div>
+      <p id="xlsxmsg" class="msg" hidden>XLSX browser parsing is the next processor hook. For the current live preview, use CSV.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ask">
+  <div class="wrap askgrid">
+    <div><div class="eyebrow">ASK PYOREX</div><h2>Not a chatbot.<br/><span>A geological advisor.</span></h2></div>
+    <div class="askcard">
+      <div class="prompt">“Which sector shows the more proximal hydrothermal signature?”</div>
+      <p>Ask PyOrex will combine your dataset, geological context and published evidence to explain patterns, compare domains and recommend the next analysis.</p>
+      <div class="chips"><span>Dataset-aware</span><span>Geological reasoning</span><span>References</span><span>Case studies</span></div>
+      <button disabled>Ask PyOrex · in development</button>
+    </div>
+  </div>
+</section>
+
+<section id="desktop" class="desktop"><div class="wrap deskgrid"><div><div class="eyebrow">PYOREX DESKTOP</div><h2>Deeper workflows.<br/>Offline when needed.</h2></div><p>Desktop remains the full professional environment for heavier processing, broader toolsets and offline field or corporate workflows. PyOrex Web is the fast browser layer — not a replacement.</p></div></section>
 </Base>
-<style>.soon{min-height:760px;display:flex;align-items:center;background:radial-gradient(circle at 78% 28%,#1b3941 0,#0b2026 27%,#061216 62%);overflow:hidden}.soon .wrap{padding-top:70px;padding-bottom:90px}.badge{display:inline-block;margin-top:38px;border:1px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:.2em;padding:9px 12px}.soon h1{font-size:clamp(72px,9vw,132px);line-height:.8;letter-spacing:-.07em;margin:30px 0}.soon h1 span{font-weight:250;color:#aebabc}.soon p{font-size:20px;line-height:1.6;color:#b7c2c4;max-width:650px}.line{height:1px;background:var(--line);max-width:650px;margin:38px 0 25px}.note{display:flex;flex-direction:column;gap:7px;margin-bottom:32px}.note b{font-size:13px}.note span{font-size:11px;color:var(--muted)}</style>
+
+<script is:inline>
+const preview=document.getElementById('preview');
+const fname=document.getElementById('fname'), rows=document.getElementById('rows'), cols=document.getElementById('cols'), numeric=document.getElementById('numeric'), mode=document.getElementById('mode'), tags=document.getElementById('tags'), xlsxmsg=document.getElementById('xlsxmsg');
+function splitCSV(line){const o=[];let c='',q=false;for(let i=0;i<line.length;i++){const x=line[i];if(x==='"'){if(q&&line[i+1]==='"'){c+='"';i++;}else q=!q}else if(x===','&&!q){o.push(c.trim());c=''}else c+=x}o.push(c.trim());return o}
+function load(file,m){
+  fname.textContent=file.name; mode.textContent=m; preview.hidden=false; xlsxmsg.hidden=true;
+  if(!file.name.toLowerCase().endsWith('.csv')){rows.textContent=cols.textContent=numeric.textContent='—';tags.innerHTML='';xlsxmsg.hidden=false;preview.scrollIntoView({behavior:'smooth',block:'center'});return}
+  const r=new FileReader(); r.onload=()=>{const lines=String(r.result||'').replace(/\r/g,'').split('\n').filter(x=>x.trim());const h=lines.length?splitCSV(lines[0]):[];const data=lines.slice(1,5001).map(splitCSV);let n=0;h.forEach((_,i)=>{const v=data.slice(0,250).map(x=>x[i]).filter(x=>x!==undefined&&x!=='');if(v.length&&v.filter(x=>Number.isFinite(Number(String(x).replace(/[<>]/g,'')))).length/v.length>.75)n++});rows.textContent=data.length.toLocaleString();cols.textContent=h.length;numeric.textContent=n;tags.innerHTML=h.slice(0,24).map(x=>'<span>'+String(x).replace(/[&<>]/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[s]))+'</span>').join('')+(h.length>24?'<span>+'+(h.length-24)+' more</span>':'');preview.scrollIntoView({behavior:'smooth',block:'center'})};r.readAsText(file)
+}
+document.getElementById('geochem')?.addEventListener('change',e=>{const f=e.target.files?.[0];if(f)load(f,'GEOCHEMISTRY')});
+document.getElementById('spectra')?.addEventListener('change',e=>{const f=e.target.files?.[0];if(f)load(f,'SPECTROMETRY')});
+document.getElementById('clear')?.addEventListener('click',()=>{preview.hidden=true;document.getElementById('geochem').value='';document.getElementById('spectra').value=''});
+</script>
+
+<style>
+.hero{min-height:700px;background:radial-gradient(circle at 78% 35%,#16353d 0,#0b1e24 27%,#061216 64%);display:flex;align-items:center}.grid{display:grid;grid-template-columns:1fr .9fr;gap:70px;align-items:center;padding:75px 0}.hero h1{font-size:clamp(66px,7vw,108px);line-height:.82;letter-spacing:-.065em;margin:22px 0}.hero h1 span{color:#a8b7ba;font-weight:250}.lead{font-size:18px;line-height:1.7;color:#b5c1c4;max-width:680px}.actions{display:flex;gap:12px;margin-top:30px}.local{display:flex;gap:10px;align-items:center;margin-top:45px;color:#82949a;font-size:11px}.local span{width:7px;height:7px;border-radius:50%;background:#5ed0c8;box-shadow:0 0 14px #5ed0c888}.local b{color:#b8c4c7}.flowcard{border:1px solid #28434b;background:#08191eb8;padding:28px}.flowhead{display:flex;justify-content:space-between;border-bottom:1px solid #203940;padding-bottom:18px;font-size:11px;letter-spacing:.14em}.flowhead small{color:var(--gold)}.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px;padding:38px 0}.flow div{display:flex;flex-direction:column;gap:6px}.flow small{color:#657b82;font-size:9px}.flow b{font-size:13px}.flow em{font-size:10px;color:#8ea0a5;font-style:normal}.flow i{font-style:normal;color:#4b656c}.signal{height:1px;background:linear-gradient(90deg,var(--gold),#3c8f97,transparent);margin-bottom:22px}.flowcard p{color:#9caeb2;line-height:1.6;font-size:13px}.workspace{padding:90px 0;background:#08161b}.sectionhead,.deskgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}.sectionhead{margin-bottom:36px}.sectionhead h2,.desktop h2{font-size:48px;letter-spacing:-.045em;margin:12px 0 0}.sectionhead p,.desktop p{color:var(--muted);line-height:1.7}.modules{display:grid;grid-template-columns:1fr 1fr;gap:18px}.module{border:1px solid var(--line);background:#0d2026;padding:30px}.modtop{display:flex;justify-content:space-between;font-size:10px;color:#71848a}.modtop small{color:var(--gold);letter-spacing:.13em}.modicon{font-size:46px;color:#2dd1d7;margin:32px 0 18px}.module h3{font-size:32px;margin:0 0 12px}.module>p{color:#aebdc1;line-height:1.65}.module ul{list-style:none;padding:0;margin:26px 0}.module li{padding:9px 0;border-bottom:1px solid #173038;color:#93a6ab;font-size:13px}.module li:before{content:'·';color:var(--gold);margin-right:10px}.upload{display:flex;justify-content:space-between;align-items:center;border:1px solid #31505a;padding:15px 16px;cursor:pointer}.upload:hover{border-color:#55cbd0}.upload input{display:none}.upload b{font-size:12px}.upload span{font-size:10px;color:#71858a}.preview{margin-top:22px;border:1px solid #2d4952;background:#0b1d23;padding:26px}.previewtop{display:flex;justify-content:space-between;align-items:center}.previewtop small,.fields>small{font-size:9px;color:var(--gold);letter-spacing:.15em}.previewtop h3{margin:7px 0 0;font-size:20px}.previewtop button{background:none;border:1px solid #35515a;color:#9dafb3;padding:8px 12px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#20373e;margin:25px 0}.metrics div{background:#0b1d23;padding:18px}.metrics small{display:block;font-size:8px;color:#71858a;margin-bottom:8px}.metrics b{font-size:20px}.fields #tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.fields #tags span,.chips span{border:1px solid #29464f;padding:7px 10px;font-size:10px;color:#9aadb1}.msg{color:#d2ad58;font-size:11px;margin:18px 0 0}.ask{padding:95px 0;background:#0b1b20}.askgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.ask h2{font-size:clamp(46px,5vw,72px);line-height:.95;letter-spacing:-.05em;margin:18px 0}.ask h2 span{font-weight:250;color:#a9b7ba}.askcard{border:1px solid #304c54;background:#0d2026;padding:28px}.prompt{font-size:19px;line-height:1.5;color:#d9e0e1;border-left:2px solid var(--gold);padding-left:18px}.askcard p{color:#98aaae;line-height:1.7}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}.askcard button{width:100%;padding:13px;border:1px solid #35515a;background:#0a181d;color:#71858a}.desktop{padding:85px 0;background:#e8e5dc;color:#111}.desktop p{color:#4c5558}@media(max-width:900px){.grid,.sectionhead,.modules,.askgrid,.deskgrid{grid-template-columns:1fr}.hero{min-height:auto}.grid{padding:70px 0}.flowcard{display:none}.metrics{grid-template-columns:1fr 1fr}.local{align-items:flex-start;flex-wrap:wrap}.workspace,.ask,.desktop{padding:60px 0}}
+</style>
