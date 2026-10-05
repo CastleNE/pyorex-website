@@ -15,7 +15,11 @@
       "signal": "Barrick reports new targets in Yauri supporting a clustered-porphyry concept and says land consolidation is well advanced in the new Tartaro district.",
       "why_it_matters": "A major continuing to generate and consolidate greenfield ground is a useful signal for district-scale targeting and future partnership or land-position activity.",
       "source_name": "Barrick Q2 2026 Results",
-      "source_url": "https://www.barrick.com/English/news/news-details/2026/q2-2026-results/default.aspx"
+      "source_url": "https://www.barrick.com/English/news/news-details/2026/q2-2026-results/default.aspx",
+      "category_es": "EXPLORACIÓN MAJOR",
+      "headline_es": "Barrick avanza exploración temprana en los distritos peruanos de Yauri y Tartaro.",
+      "signal_es": "Barrick reporta nuevos targets en Yauri que respaldan un concepto de pórfidos agrupados y señala que la consolidación de terrenos está muy avanzada en el nuevo distrito de Tartaro.",
+      "why_it_matters_es": "Que una major continúe generando y consolidando terreno greenfield es una señal útil para el targeting a escala distrital y para futuras asociaciones o movimientos de posición territorial."
     },
     {
       "id": "teck-condor-cobreorco-2026",
@@ -31,7 +35,11 @@
       "signal": "A 3,500 m, six-hole diamond program is the first drilling under the Teck Peru option/JV with Condor Resources; two rigs were planned to test coincident skarn-porphyry geophysical and geochemical targets.",
       "why_it_matters": "This is exactly the type of major–junior transaction PyOrex should track: a major funding drill-scale technical validation of a junior-generated target.",
       "source_name": "Condor Resources",
-      "source_url": "https://condorresources.com/news/condor-resources-announces-drilling-program-at-the-cobreorco-copper-gold-project-peru/"
+      "source_url": "https://condorresources.com/news/condor-resources-announces-drilling-program-at-the-cobreorco-copper-gold-project-peru/",
+      "category_es": "MAJOR × JUNIOR",
+      "headline_es": "Comienza la perforación financiada por Teck en el proyecto Cobreorco, controlado por una junior.",
+      "signal_es": "Un programa diamantino de 3,500 m y seis sondajes constituye la primera perforación bajo el acuerdo de opción/JV de Teck Peru con Condor Resources; se planificaron dos equipos para probar targets coincidentes de skarn-pórfido definidos por geofísica y geoquímica.",
+      "why_it_matters_es": "Es exactamente el tipo de transacción major–junior que PyOrex debe seguir: una major financiando la validación técnica mediante perforación de un target generado por una junior."
     },
     {
       "id": "minsur-latinmetals-lacsha-2026",
@@ -46,7 +54,11 @@
       "signal": "The LOI contemplates an initial 75% earn-in with cash payments and up to 60,000 m of Minsur-funded drilling, followed by a path to 100% ownership.",
       "why_it_matters": "A live Peru transaction provides a strong benchmark for how technically attractive junior/project-generator copper ground can be structured for a larger strategic partner.",
       "source_name": "Latin Metals",
-      "source_url": "https://www.latin-metals.com/news/2026/latin-metals-and-minsur-sa-agree-option-terms-for-lacsha-c2026-08-18-060503"
+      "source_url": "https://www.latin-metals.com/news/2026/latin-metals-and-minsur-sa-agree-option-terms-for-lacsha-c2026-08-18-060503",
+      "category_es": "TRANSACCIÓN ESTRATÉGICA",
+      "headline_es": "Minsur y Latin Metals acuerdan términos de opción para el proyecto de cobre Lacsha.",
+      "signal_es": "La LOI contempla un earn-in inicial de 75%, con pagos en efectivo y hasta 60,000 m de perforación financiada por Minsur, seguido de una vía para alcanzar el 100% de propiedad.",
+      "why_it_matters_es": "Una transacción activa en Perú sirve como referencia sólida de cómo un terreno cuprífero técnicamente atractivo, controlado por una junior/project generator, puede estructurarse para incorporar a un socio estratégico de mayor escala."
     },
     {
       "id": "rio-fqm-la-granja",
@@ -61,7 +73,11 @@
       "signal": "First Quantum holds 55% and Rio Tinto 45%; First Quantum is responsible for sole-funding agreed work toward feasibility under the JV structure.",
       "why_it_matters": "Not a new 2026 transaction, but strategically relevant as a benchmark for major-to-major risk sharing around a very large, technically complex Peruvian copper asset.",
       "source_name": "Rio Tinto",
-      "source_url": "https://www.riotinto.com/en/news/releases/2023/rio-tinto-and-first-quantum-complete-la-granja-joint-venture-transaction"
+      "source_url": "https://www.riotinto.com/en/news/releases/2023/rio-tinto-and-first-quantum-complete-la-granja-joint-venture-transaction",
+      "category_es": "SEGUIMIENTO DE JV ENTRE MAJORS",
+      "headline_es": "La Granja continúa siendo una referencia de JV entre majors para el cobre peruano.",
+      "signal_es": "First Quantum posee 55% y Rio Tinto 45%; First Quantum es responsable de financiar íntegramente el programa de trabajo acordado hacia factibilidad bajo la estructura del JV.",
+      "why_it_matters_es": "No es una transacción nueva de 2026, pero sigue siendo estratégicamente relevante como referencia de reparto de riesgo entre majors en torno a un activo cuprífero peruano muy grande y técnicamente complejo."
     }
   ]
 }
