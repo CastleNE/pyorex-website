@@ -24,7 +24,11 @@
       "opportunity_rating": "HIGH-PRIORITY WATCH",
       "source_name": "Tier One Silver",
       "source_url": "https://tieronesilver.com/news-media/news-releases/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "epitermal de alta sulfuración / relacionado a pórfido",
+      "why_it_matters_es": "Sistema epitermal de alta ley activo y controlado por una junior en el corredor estructural Incapuquio, con perforación de seguimiento en 2026 y potencial distrital de pórfido aún no resuelto.",
+      "opportunity_rating_es": "SEGUIMIENTO DE ALTA PRIORIDAD",
+      "availability_status_es": "No se comercializa públicamente"
     },
     {
       "id": "xali-pico-machay-2026-10",
@@ -47,7 +51,11 @@
       "opportunity_rating": "HIGH-PRIORITY WATCH",
       "source_name": "Xali Gold",
       "source_url": "https://xaligold.com/projects/peru/pm/overview/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "epitermal de alta sulfuración",
+      "why_it_matters_es": "Activo aurífero avanzado con una importante base de datos histórica de perforación e ingeniería, nuevos resultados de campo en 2026 y una ruta clara de reevaluación técnica bajo un entorno de precios del oro mucho más favorable.",
+      "opportunity_rating_es": "SEGUIMIENTO DE ALTA PRIORIDAD",
+      "availability_status_es": "No se comercializa públicamente"
     },
     {
       "id": "condor-pucamayo-2026-10",
@@ -72,7 +80,11 @@
       "opportunity_rating": "HIGH-PRIORITY WATCH",
       "source_name": "Condor Resources",
       "source_url": "https://condorresources.com/news/condor-receives-environmental-permit-dia-for-drilling-at-flagship-pucamayo-project/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "epitermal de alta a intermedia sulfuración / pórfido",
+      "why_it_matters_es": "Un lithocap extenso y un segundo centro hidrotermal-magmático interpretado permanecen sin probar en Pucamayo Sur; la DIA de 2026 reduce de forma importante una de las principales incertidumbres previas a la perforación.",
+      "opportunity_rating_es": "SEGUIMIENTO DE ALTA PRIORIDAD",
+      "availability_status_es": "No se comercializa públicamente"
     },
     {
       "id": "radius-jonco-2026-10",
@@ -98,7 +110,11 @@
       "opportunity_rating": "TRANSACTION BENCHMARK",
       "source_name": "Radius Gold",
       "source_url": "https://radiusgold.com/news/radius-gold-executes-formal-option-agreement-for-100-of-the-jonco-silver-project-peru/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "epitermal polimetálico / diatrema",
+      "why_it_matters_es": "La reciente transacción de opción con un tercero ofrece una referencia actual de la economía de generación de proyectos y destaca un sistema polimetálico de gran escala con perforación histórica.",
+      "opportunity_rating_es": "REFERENCIA DE TRANSACCIÓN",
+      "availability_status_es": "Bajo opción de Radius"
     },
     {
       "id": "magma-ninobamba-2026-10",
@@ -122,7 +138,11 @@
       "opportunity_rating": "WATCH / ACCESS CATALYST",
       "source_name": "Magma Silver",
       "source_url": "https://magmasilver.com/news/magma-silver-provides-update-on-ninobamba-silver-gold-project-peru/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "epitermal de alta y baja sulfuración",
+      "why_it_matters_es": "Corredor mineralizado de aproximadamente 8 km con trabajos históricos de compañías major y targets de alta y baja sulfuración; los acuerdos de acceso son actualmente el principal condicionante para una exploración sistemática.",
+      "opportunity_rating_es": "SEGUIMIENTO / CATALIZADOR DE ACCESO",
+      "availability_status_es": "No se comercializa públicamente"
     },
     {
       "id": "chakana-la-joya-2026-10",
@@ -147,7 +167,11 @@
       "opportunity_rating": "STRATEGIC WATCH",
       "source_name": "Chakana Copper",
       "source_url": "https://chakanacopper.com/projects/la-joya-project/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "pórfido Cu-Au / epitermal de alta sulfuración / brecha",
+      "why_it_matters_es": "Proyecto controlado por una junior en el distrito Aija-Ticapampa con targets diferenciados de pórfido, HSE y brechas; la simplificación de la propiedad mejora la claridad estratégica del activo.",
+      "opportunity_rating_es": "SEGUIMIENTO ESTRATÉGICO",
+      "availability_status_es": "No se comercializa públicamente"
     },
     {
       "id": "turmalina-colquemayo-2026-10",
@@ -173,7 +197,11 @@
       "opportunity_rating": "BROWNFIELD WATCH",
       "source_name": "Turmalina Metals",
       "source_url": "https://turmalina.squarespace.com/colquemayo",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "epitermal de alta sulfuración / pórfido",
+      "why_it_matters_es": "El proyecto combina interceptos históricos Cu-Ag inusualmente fuertes, ~27,000 m de perforación histórica y targets aún no perforados; es una referencia útil para evaluar oportunidades brownfield de juniors.",
+      "opportunity_rating_es": "SEGUIMIENTO BROWNFIELD",
+      "availability_status_es": "Opción de Turmalina para adquirir el 100%"
     },
     {
       "id": "aftermath-berenguela-2026-10",
@@ -197,7 +225,11 @@
       "opportunity_rating": "ADVANCED-ASSET WATCH",
       "source_name": "Aftermath Silver",
       "source_url": "https://aftermathsilver.com/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "Ag-Cu-Mn hospedado en carbonatos",
+      "why_it_matters_es": "Activo junior avanzado en proceso de reducción de riesgo técnico, con PFS activa y perforación en curso; es más relevante como referencia corporativa/transaccional que como terreno greenfield.",
+      "opportunity_rating_es": "SEGUIMIENTO DE ACTIVO AVANZADO",
+      "availability_status_es": "No se comercializa públicamente"
     },
     {
       "id": "silverx-nueva-recuperada-2026-10",
@@ -224,7 +256,11 @@
       "opportunity_rating": "CORPORATE BENCHMARK",
       "source_name": "Silver X Mining",
       "source_url": "https://www.silverxmining.com/projects/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "vetas de sulfuración intermedia / polimetálico a escala distrital",
+      "why_it_matters_es": "No es un objetivo de adquisición, pero constituye una referencia útil de transición junior-productor para consolidación distrital, crecimiento de recursos y exploración respaldada por infraestructura en el centro del Perú.",
+      "opportunity_rating_es": "REFERENCIA CORPORATIVA",
+      "availability_status_es": "Plataforma operativa; no comercializada"
     },
     {
       "id": "ausquest-cangallo-2026-10",
@@ -248,7 +284,11 @@
       "opportunity_rating": "TOP DISCOVERY WATCH",
       "source_name": "AusQuest",
       "source_url": "https://www.ausquest.com.au/cangallo-peru/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "pórfido Cu-Au",
+      "why_it_matters_es": "Uno de los nuevos descubrimientos de cobre liderados por juniors más importantes del Perú. Su escala, baja elevación y cercanía a infraestructura costera lo hacen imprescindible en cualquier universo actual de scouting en Perú, aunque no se comercializa públicamente para una transacción.",
+      "opportunity_rating_es": "SEGUIMIENTO DE DESCUBRIMIENTO PRIORITARIO",
+      "availability_status_es": "100% AusQuest; no se comercializa públicamente"
     },
     {
       "id": "element79-lucero-2026-10",
@@ -272,7 +312,11 @@
       "opportunity_rating": "WATCH / EXECUTION RISK",
       "source_name": "Element79 Gold",
       "source_url": "https://www.element79.gold/lucero-peru",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "vetas epitermales de alta ley / target de alta sulfuración",
+      "why_it_matters_es": "La producción histórica, extensas labores subterráneas, antecedentes de vetas de alta ley y objetivos de reinicio a corto plazo hacen de Lucero un activo relevante para evaluación técnica y corporativa de metales preciosos, pese al riesgo de ejecución social y de acceso.",
+      "opportunity_rating_es": "SEGUIMIENTO / RIESGO DE EJECUCIÓN",
+      "availability_status_es": "No se comercializa públicamente"
     },
     {
       "id": "patriot-tassa-2026-10",
@@ -299,7 +343,11 @@
       "opportunity_rating": "RESOURCE GROWTH WATCH",
       "source_name": "Patriot Resources",
       "source_url": "https://www.patriotresources.com.au/projects/tassa-silver-projects/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "epitermal de gran escala",
+      "why_it_matters_es": "Proyecto junior de plata recientemente consolidado, con un recurso JORC inicial de 25.5 Moz Ag, un amplio target conceptual de exploración y una importante base histórica de perforación y datos.",
+      "opportunity_rating_es": "SEGUIMIENTO DE CRECIMIENTO DE RECURSOS",
+      "availability_status_es": "100% Patriot; no se comercializa públicamente"
     },
     {
       "id": "silverx-pampas-2026-10",
@@ -323,7 +371,11 @@
       "opportunity_rating": "TRANSACTION BENCHMARK",
       "source_name": "Silver X Mining",
       "source_url": "https://www.silverxmining.com/silver-x-acquires-the-high-grade-pampas-gold-silver-project-expanding-its-precious-metal-asset-base-in-peru/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "sistema de vetas epitermales",
+      "why_it_matters_es": "Referencia directa de una transacción de 2026 sobre terreno de exploración de Au-Ag de alta ley en Perú: 36 vetas cartografiadas, fuertes leyes históricas en superficie y sin perforación sistemática.",
+      "opportunity_rating_es": "REFERENCIA DE TRANSACCIÓN",
+      "availability_status_es": "Acuerdo definitivo para que Silver X adquiera el 100%"
     },
     {
       "id": "pecoy-copper-2026-10",
@@ -349,7 +401,11 @@
       "opportunity_rating": "HIGH-PRIORITY WATCH",
       "source_name": "Pecoy Copper",
       "source_url": "https://www.globenewswire.com/news-release/2026/09/09/3358423/0/en/pecoy-copper-defines-large-untested-mtp-01-target-beyond-newly-expanded-northwest-copper-mineralization.html",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "pórfido Cu-Au-Mo-Ag / brecha",
+      "why_it_matters_es": "Historia de perforación activa con abundante información, múltiples interceptos muy amplios de Cu-Au y un programa de 35,000 m en 2026. Debe formar parte del núcleo de seguimiento de juniors en Perú.",
+      "opportunity_rating_es": "SEGUIMIENTO DE ALTA PRIORIDAD",
+      "availability_status_es": "100% Pecoy Copper; no se comercializa públicamente"
     },
     {
       "id": "panoro-cotabambas-2026-10",
@@ -374,7 +430,11 @@
       "opportunity_rating": "ADVANCED-ASSET WATCH",
       "source_name": "Panoro Minerals",
       "source_url": "https://panoro.com/en/news/2026/panoro-minerals-defines-high-grade-strategy-for-cotabambas-project/",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "pórfido / skarn Cu-Au-Ag",
+      "why_it_matters_es": "Gran recurso Cu-Au-Ag controlado por una junior, con perforación activa en 2026, zonas de alta ley y alternativas de desarrollo; un activo estratégico relevante dentro del clúster cuprífero del sur del Perú.",
+      "opportunity_rating_es": "SEGUIMIENTO DE ACTIVO AVANZADO",
+      "availability_status_es": "100% Panoro; no se comercializa públicamente"
     },
     {
       "id": "peruvian-metals-palta-dorada-2026-10",
@@ -398,7 +458,11 @@
       "opportunity_rating": "NICHE PRECIOUS-METALS WATCH",
       "source_name": "Peruvian Metals",
       "source_url": "https://www.newsfilecorp.com/release/314325/Peruvian-Metals-Corp.-Commences-Underground-Development-to-Access-HighGrade-AuAg-Sulphides-at-Palta-Dorada",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "vetas Au-Ag de alta ley",
+      "why_it_matters_es": "De menor escala que las oportunidades de pórfido, pero relevante para scouting de metales preciosos porque el proyecto avanza desde exploración hacia acceso subterráneo directo y puede aprovechar infraestructura de procesamiento cercana.",
+      "opportunity_rating_es": "SEGUIMIENTO DE NICHO EN METALES PRECIOSOS",
+      "availability_status_es": "100% Peruvian Metals; no se comercializa públicamente"
     },
     {
       "id": "palamina-usicayos-2026-10",
@@ -421,7 +485,11 @@
       "opportunity_rating": "GOLD DISCOVERY WATCH",
       "source_name": "Palamina",
       "source_url": "https://www.palamina.com/usicayos",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "oro orogénico",
+      "why_it_matters_es": "Proyecto de oro orogénico 100% propio y con baja carga de regalías en el cinturón de oro orogénico de Puno, con múltiples zonas estructurales perforadas y aún no probadas; la simplificación corporativa aumenta el enfoque sobre el activo aurífero.",
+      "opportunity_rating_es": "SEGUIMIENTO DE DESCUBRIMIENTO DE ORO",
+      "availability_status_es": "100% Palamina; no se comercializa públicamente"
     },
     {
       "id": "colt-galena-2026-10",
@@ -445,7 +513,11 @@
       "opportunity_rating": "NEW JUNIOR WATCH",
       "source_name": "Palamina / Colt Silver",
       "source_url": "https://www.palamina.com/news/2026/9/29/palamina-confirms-closing-of-spin-out-arrangement",
-      "status": "verified"
+      "status": "verified",
+      "deposit_model_es": "Ag-Cu-Mn hospedado en carbonatos / estilo CRD",
+      "why_it_matters_es": "Una junior independiente recientemente creada y enfocada en Perú, con su principal catalizador de perforación totalmente financiado y una cartera más amplia de siete proyectos Ag-Cu, es exactamente el tipo de oportunidad corporativa emergente que el HUB debe detectar temprano.",
+      "opportunity_rating_es": "SEGUIMIENTO DE NUEVA JUNIOR",
+      "availability_status_es": "100% Colt Silver; no se comercializa públicamente"
     }
   ],
   "schema": {
