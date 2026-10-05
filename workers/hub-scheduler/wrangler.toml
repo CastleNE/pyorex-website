@@ -1,0 +1,9 @@
+name = "pyorex-hub-scheduler"
+main = "src/index.js"
+compatibility_date = "2026-10-04"
+
+[triggers]
+crons = ["17 12 * * 1,4"]
+
+[vars]
+COLLECT_URL = "https://pyorex.com/api/hub/collect"
