@@ -4,11 +4,11 @@ import Base from '../layouts/Base.astro';
 <Base title="PyOrex Software — Coming Soon" description="PyOrex geoscience software for mineral exploration.">
 <section style="min-height:72vh;display:flex;align-items:center;background:#07171b">
   <div class="wrap" style="padding:90px 0">
-    <div class="eyebrow">PYOREX SOFTWARE · IN DEVELOPMENT</div>
-    <h1 style="font-size:clamp(64px,9vw,120px);line-height:.9;letter-spacing:-.06em;margin:20px 0 28px">COMING<br/>SOON</h1>
-    <p style="max-width:650px;color:#9fb0b1;font-size:18px;line-height:1.7">A new geoscience workspace for mineral exploration is under active development.</p>
-    <p style="color:#efbd35;font:11px ui-monospace,monospace;letter-spacing:.12em;margin-top:34px">FOCUSED · GEOLOGICAL · PRACTICAL</p>
-    <a class="btn" href="/hub" style="display:inline-block;margin-top:32px">Explore PyOrex HUB →</a>
+    <div class="eyebrow" data-en="PYOREX SOFTWARE · IN DEVELOPMENT" data-es="PYOREX SOFTWARE · EN DESARROLLO">PYOREX SOFTWARE · IN DEVELOPMENT</div>
+    <h1 style="font-size:clamp(64px,9vw,120px);line-height:.9;letter-spacing:-.06em;margin:20px 0 28px"><span data-en="COMING" data-es="MUY">COMING</span><br/><span data-en="SOON" data-es="PRONTO">SOON</span></h1>
+    <p style="max-width:650px;color:#9fb0b1;font-size:18px;line-height:1.7" data-en="A new geoscience workspace for mineral exploration is under active development." data-es="Un nuevo entorno geocientífico para exploración mineral está en desarrollo activo.">A new geoscience workspace for mineral exploration is under active development.</p>
+    <p style="color:#efbd35;font:11px ui-monospace,monospace;letter-spacing:.12em;margin-top:34px" data-en="FOCUSED · GEOLOGICAL · PRACTICAL" data-es="ENFOCADO · GEOLÓGICO · PRÁCTICO">FOCUSED · GEOLOGICAL · PRACTICAL</p>
+    <a class="btn" href="/hub" style="display:inline-block;margin-top:32px" data-en="Explore PyOrex HUB →" data-es="Explorar PyOrex HUB →">Explore PyOrex HUB →</a>
   </div>
-</section>
+</section><script is:inline>function tr(){const l=localStorage.getItem("pyorex-lang")||document.documentElement.lang||"en";document.querySelectorAll("[data-en][data-es]").forEach(e=>e.textContent=e.dataset[l])}window.addEventListener("pyorex-language",tr);tr();</script>
 </Base>
