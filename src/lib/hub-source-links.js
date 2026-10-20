@@ -20,8 +20,10 @@ function canonical(raw, base, sameHost = false) {
   try {
     const url = new URL(raw, base), origin = new URL(base);
     if (!["https:", "http:"].includes(url.protocol) || url.username || url.password) return "";
-    if (sameHost && url.hostname !== origin.hostname &&
-      !url.hostname.endsWith("." + origin.hostname)) return "";
+    const baseHost = origin.hostname.toLowerCase().replace(/^www\./, "");
+    const targetHost = url.hostname.toLowerCase().replace(/^www\./, "");
+    if (sameHost && targetHost !== baseHost &&
+      !targetHost.endsWith("." + baseHost)) return "";
     url.hash = "";
     for (const key of [...url.searchParams.keys()]) {
       if (/^(?:utm_.+|fbclid|gclid|mc_cid|mc_eid)$/i.test(key)) url.searchParams.delete(key);
