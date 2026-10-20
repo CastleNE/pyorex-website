@@ -5,12 +5,12 @@ const clean = value => String(value || "")
   .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
   .toLowerCase().replace(/\s+/g, " ").trim();
 
-const grade = /\b\d+(?:[.,]\d+)?\s*(?:g\/t|grams?\s+per\s+tonne|%|\bppm\b|oz\/t)\b/i;
+const grade = /(?:\b\d+(?:[.,]\d+)?\s*(?:g\/t|grams?\s+per\s+tonne|ppm|oz\/t)\b|\b\d+(?:[.,]\d+)?\s*%)/i;
 const interval = /\b\d+(?:[.,]\d+)?\s*(?:m|metres?|meters?|metros?)\b/i;
 const drilling = /\b(?:drill(?:ed|ing|hole|holes|s)?|sondaj(?:e|es)|perforaci(?:on|ones)|barrenos?|assay(?:s)?|intercept(?:s|ed)?|intersecci(?:on|ones)|ensayos?)\b/i;
 const assayResults = /\b(?:drill(?:ing)? results?|assay results?|intercepts?|intersections?|returns? assays?|resultados? (?:de )?(?:perforacion|sondajes?|ensayos?))\b/i;
 const resource = /\b(?:mineral resources?|resource estimates?|resource updates?|reserve estimates?|mineral reserves?|indicated resources?|inferred resources?|measured resources?|jorc|ni\s*43[- ]101|recursos? minerales?|estimacion de recursos?|reservas? minerales?)\b/i;
-const discovery = /\b(?:discover(?:y|ies|ed)?|new mineralized zone|new mineralised zone|new copper zone|new gold zone|new porphyry|new target|significant anomaly|high.grade anomaly|descubrimient(?:o|os)|nueva zona mineralizada|nuevo objetivo|anomalia significativa)\b/i;
+const discovery = /\b(?:new\b.{0,60}\b(?:target|anomaly|zone)\b|discover(?:y|ies|ed)?|new mineralized zone|new mineralised zone|new copper zone|new gold zone|new porphyry|new target|significant anomaly|high.grade anomaly|descubrimient(?:o|os)|nueva zona mineralizada|nuevo objetivo|anomalia significativa)\b/i;
 const transaction = /\b(?:joint venture|earn[- ]in|farm[- ]in|option agreement|option to acquire|acquisition|acquires?|divest(?:ment|s)?|asset sale|project sale|strategic alliance|jv agreement|acuerdo de opcion|empresa conjunta|adquisici(?:on|ones)|venta de proyecto|alianza estrategica)\b/i;
 const study = /\b(?:prefeasibility|pre-feasibility|feasibility|scoping stud(?:y|ies)|economic assessment|pea\b|pfs\b|dfs\b|metallurg(?:y|ical)|recovery tests?|testwork|prefactibilidad|factibilidad|estudios? metalurgicos?|recuperacion metalurgica)\b/i;
 const permit = /\b(?:environmental permit|drilling permit|permit approval|environmental approval|environmental impact assessment|eia approval|permitting|licencia ambiental|permiso(?:s)? de perforacion|aprobacion ambiental|evaluacion de impacto ambiental)\b/i;
