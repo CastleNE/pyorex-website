@@ -44,6 +44,7 @@ test("feed autodiscovery accepts same-host feeds, rejects offsite targets", () =
   const base = "https://junior.example";
   assert.equal(discoverFeedUrl('<link rel="alternate" type="application/rss+xml" href="/feed.xml">',base), "https://junior.example/feed.xml");
   assert.equal(discoverFeedUrl('<link rel="alternate" type="application/rss+xml" href="http://localhost/admin">',base), "");
+  assert.equal(discoverFeedUrl('<link rel="alternate" type="application/rss+xml" href="https://junior.example/feed.xml">', "https://www.junior.example"), "https://junior.example/feed.xml");
 });
 test("HTML discovery requires a substantive deep news link", () => {
   const html = '<a href="/news">News</a>' +
