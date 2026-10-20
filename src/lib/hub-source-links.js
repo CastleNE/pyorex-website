@@ -18,8 +18,10 @@ function xmlTag(xml, name) {
 }
 function canonical(raw, base, sameHost = false) {
   try {
+    if (!String(raw || "").trim()) return "";
     const url = new URL(raw, base), origin = new URL(base);
     if (!["https:", "http:"].includes(url.protocol) || url.username || url.password) return "";
+    if (/^(?:localhost|.*\\.localhost|.*\\.internal|.*\\.local)$/i.test(url.hostname) || /^(?:127\\.|10\\.|192\\.168\\.|169\\.254\\.|0\\.)/.test(url.hostname) || url.hostname.includes(":")) return "";
     const baseHost = origin.hostname.toLowerCase().replace(/^www\./, "");
     const targetHost = url.hostname.toLowerCase().replace(/^www\./, "");
     if (sameHost && targetHost !== baseHost &&
@@ -42,10 +44,11 @@ export function extractFeedEntries(xml, base, limit = 20) {
     const title = xmlTag(item, "title");
     let href = xmlTag(item, "link");
     if (!href) {
-      const link = item.match(/<link\b[^>]*>/i);
-      if (link) href = attr(link[0], "href");
+      const links = [...item.matchAll(/<link\b[^>]*>/gi)].map(x => x[0]);
+      const alternate = links.find(x => attr(x, "rel") === "alternate");
+      if (alternate || links.length) href = attr(alternate || links[0], "href");
     }
-    if (!href) href = xmlTag(item, "guid");
+    if (!href) { const guid = xmlTag(item, "guid"); if (/^https?:\/\//i.test(guid)) href = guid; }
     const url = canonical(href, base);
     if (!url || !title || title.length < 8 || seen.has(url)) continue;
     seen.add(url);
