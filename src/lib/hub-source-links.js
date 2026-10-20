@@ -21,7 +21,7 @@ function canonical(raw, base, sameHost = false) {
     if (!String(raw || "").trim()) return "";
     const url = new URL(raw, base), origin = new URL(base);
     if (!["https:", "http:"].includes(url.protocol) || url.username || url.password) return "";
-    if (/^(?:localhost|.*\\.localhost|.*\\.internal|.*\\.local)$/i.test(url.hostname) || /^(?:127\\.|10\\.|192\\.168\\.|169\\.254\\.|0\\.)/.test(url.hostname) || url.hostname.includes(":")) return "";
+    if (/^(?:localhost|.*\.localhost|.*\.internal|.*\.local)$/i.test(url.hostname) || /^(?:127\.|10\.|192\.168\.|169\.254\.|0\.)/.test(url.hostname) || url.hostname.includes(":")) return "";
     const baseHost = origin.hostname.toLowerCase().replace(/^www\./, "");
     const targetHost = url.hostname.toLowerCase().replace(/^www\./, "");
     if (sameHost && targetHost !== baseHost &&
