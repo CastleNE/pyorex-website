@@ -1,6 +1,9 @@
 function json(x,s=200){return new Response(JSON.stringify(x),{status:s,headers:{"content-type":"application/json; charset=utf-8","Cache-Control":"no-store"}})}
-function authorized(request,env){const token=request.headers.get("authorization")?.replace(/^Bearer\s+/i,"")||new URL(request.url).searchParams.get("token");return !!env.HUB_INGEST_TOKEN&&token===env.HUB_INGEST_TOKEN}
+function authorized(request,env){const token=request.headers.get("authorization")?.replace(/^Bearer\s+/i,"");return !!env.HUB_INGEST_TOKEN&&token===env.HUB_INGEST_TOKEN}
 async function hashText(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+function decode(s){return String(s||"").replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g,"$1").replace(/&amp;/g,"&").replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,"<").replace(/&gt;/g,">").trim()}
+function tag(xml,name){const m=xml.match(new RegExp("<(?:[a-z0-9_-]+:)?"+name+"(?:\\\\s[^>]*)?>([\\\\s\\\\S]*?)<\\\\/(?:[a-z0-9_-]+:)?"+name+">","i"));return m?decode(m[1]):""}
+function entries(xml,base){const result=[],blocks=[...xml.matchAll(/<(item|entry)\\b[^>]*>([\\s\\S]*?)<\\/\\1>/gi)].slice(0,35);for(const m of blocks){const x=m[2],title=tag(x,"title");let link=tag(x,"link");if(!link){const a=x.match(/<link\\b[^>]*href=["']([^"']+)["'][^>]*\\/?\s*>/i);if(a)link=decode(a[1])}if(!link)link=tag(x,"guid");try{const url=new URL(link,base);if(!["http:","https:"].includes(url.protocol)||!title)continue;url.hash="";result.push({url:url.href,title:title.replace(/<[^>]+>/g," ").slice(0,350),date:tag(x,"pubDate")||tag(x,"published")||tag(x,"updated")})}catch{}}return result}
 export async function onRequestPost({request,env}){
  if(!env.PYOREX_DB)return json({status:"setup_required",message:"PYOREX_DB is not bound"},503);
  if(!authorized(request,env))return json({status:"unauthorized"},401);
@@ -13,7 +16,14 @@ export async function onRequestPost({request,env}){
   const target=s.feed_url||s.url,r=await fetch(target,{headers:{"user-agent":"PyOrex-HUB/1.0 (+https://pyorex.com/hub)","accept":"text/html,application/rss+xml,application/atom+xml,application/xml;q=0.9,*/*;q=0.8"}});
   if(!r.ok)throw new Error("HTTP "+r.status);
   const body=await r.text(),hash=await hashText(body.slice(0,250000)),previous=(s.last_error||"").startsWith("content-sha256:")?s.last_error.slice(15):null;
-  if(previous&&previous!==hash){const fp=await hashText(s.id+"|"+hash);const ins=await env.PYOREX_DB.prepare(`INSERT OR IGNORE INTO hub_candidates(fingerprint,source_id,detected_at,source_url,content_hash,project_hint,company_hint) VALUES(?,?,?,?,?,?,?)`).bind(fp,s.id,now,target,hash,s.project||null,s.company||null).run();if((ins.meta?.changes||0)>0)candidates++}else if(previous===hash)unchanged++;
+  const feedItems=entries(body,target);
+  if(feedItems.length){
+    // Feed entries are individual candidates; a source-page redesign does not create fake news.
+    for(const item of feedItems){const fp=await hashText("feed-item|"+s.id+"|"+item.url);const ins=await env.PYOREX_DB.prepare(`INSERT OR IGNORE INTO hub_candidates(fingerprint,source_id,detected_at,source_url,content_hash,project_hint,company_hint,classification,rationale) VALUES(?,?,?,?,?,?,?,?,?)`).bind(fp,s.id,now,item.url,await hashText(item.title+"|"+item.date),s.project||null,s.company||null,"feed_article",item.title+(item.date?" | "+item.date:"")).run();if((ins.meta?.changes||0)>0)candidates++}
+  }else if(previous&&previous!==hash){
+    // HTML changes are queued for review, never misrepresented as individual articles.
+    const fp=await hashText("source-change|"+s.id+"|"+hash);const ins=await env.PYOREX_DB.prepare(`INSERT OR IGNORE INTO hub_candidates(fingerprint,source_id,detected_at,source_url,content_hash,project_hint,company_hint,classification,rationale) VALUES(?,?,?,?,?,?,?,?,?)`).bind(fp,s.id,now,target,hash,s.project||null,s.company||null,"source_change","Website content changed; article not yet identified").run();if((ins.meta?.changes||0)>0)candidates++;
+  }else if(previous===hash)unchanged++;
   await env.PYOREX_DB.prepare(`UPDATE hub_sources SET last_checked_at=?,last_success_at=?,last_error=?,consecutive_errors=0,next_check_at=datetime(?,'+7 days') WHERE id=?`).bind(now,now,"content-sha256:"+hash,now,s.id).run();ok++;
  }catch(e){errors++;await env.PYOREX_DB.prepare(`UPDATE hub_sources SET last_checked_at=?,last_error=?,consecutive_errors=consecutive_errors+1,next_check_at=datetime(?,'+1 day') WHERE id=?`).bind(now,String(e.message||e).slice(0,500),now,s.id).run()}}
  await env.PYOREX_DB.prepare("UPDATE hub_scan_runs SET finished_at=?,sources_checked=?,candidates_seen=?,errors=? WHERE id=?").bind(new Date().toISOString(),sources.length,candidates,errors,run.id).run();
